@@ -1,3 +1,5 @@
+import annaImg from "@/assets/teachers/anna.webp";
+
 const FounderHero = () => {
   return (
     <section className="relative overflow-hidden py-16 md:py-24">
@@ -7,10 +9,8 @@ const FounderHero = () => {
         <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
           {/* Photo */}
           <div className="flex-shrink-0">
-            <div className="w-[260px] h-[340px] md:w-[320px] md:h-[420px] rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(100,50,200,0.25)] border-4 border-primary/20">
-              <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30 flex items-center justify-center">
-                <span className="text-6xl">👩‍🎤</span>
-              </div>
+            <div className="w-[240px] h-[320px] md:w-[280px] md:h-[380px] rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(100,50,200,0.25)] border-4 border-primary/20">
+              <img src={annaImg} alt="Анна Жирова" className="w-full h-full object-cover object-top" />
             </div>
           </div>
           {/* Text */}
