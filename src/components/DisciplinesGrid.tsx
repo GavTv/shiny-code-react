@@ -53,9 +53,9 @@ const DisciplinesGrid = () => {
           {disciplines.map((d, idx) => (
             <div
               key={idx}
-              className="group bg-card rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1 flex flex-col"
             >
-              <div className="p-8 pb-4">
+              <div className="p-8 pb-4 flex-1">
                 <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
                   {d.icon}
                 </div>
