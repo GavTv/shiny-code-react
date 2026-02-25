@@ -1,4 +1,7 @@
 import { Mic } from "lucide-react";
+import studio1 from "@/assets/gallery/studio1.png";
+import studio2 from "@/assets/gallery/studio2.png";
+import studio3 from "@/assets/gallery/studio3.png";
 
 const AboutGallery = () => {
   return (
@@ -22,7 +25,7 @@ const AboutGallery = () => {
         {/* Photo mosaic */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-5">
           <div className="relative rounded-[16px] overflow-hidden h-[260px] md:h-[420px]">
-            <div className="w-full h-full bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
+            <img src={studio3} alt="Студия Звук Вокруг" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
               <h3 className="font-heading text-2xl font-bold text-white">
                 Музыка есть счастье
@@ -30,10 +33,10 @@ const AboutGallery = () => {
             </div>
           </div>
           <div className="rounded-[16px] overflow-hidden h-[200px] md:h-[420px]">
-            <div className="w-full h-full bg-gradient-to-br from-accent/15 via-primary/10 to-accent/25" />
+            <img src={studio1} alt="Занятие вокалом" className="w-full h-full object-cover" />
           </div>
           <div className="rounded-[16px] overflow-hidden h-[200px] md:h-[420px]">
-            <div className="w-full h-full bg-gradient-to-br from-primary/25 via-accent/15 to-primary/10" />
+            <img src={studio2} alt="Урок гитары" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
