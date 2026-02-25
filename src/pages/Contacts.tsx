@@ -1,6 +1,7 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import { ContactHero, QuickContact, FeedbackForm, LocationsSection, SocialCTA } from "@/components/ContactSections";
+import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
 
 const Contacts = () => {
@@ -8,9 +9,11 @@ const Contacts = () => {
   return (
     <div className="w-full min-h-screen">
       <Navigation />
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <h1 className="text-4xl font-heading font-bold text-foreground">Контакты</h1>
-      </div>
+      <ContactHero />
+      <QuickContact />
+      <FeedbackForm onPrivacyOpen={() => setPrivacyOpen(true)} />
+      <LocationsSection />
+      <SocialCTA />
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
     </div>
