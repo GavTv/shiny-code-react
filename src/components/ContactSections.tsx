@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Instagram, Send, MessageCircle, Music } from "lucide-react";
-
-const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=79162353381&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0";
+import { Phone, Mail, MapPin, Instagram, Send, Music } from "lucide-react";
 
 /* ─── Hero ─── */
 const ContactHero = () => (
@@ -17,9 +15,7 @@ const ContactHero = () => (
           Откройте для себя свой голос, инструмент или сценическое мастерство в уютной музыкальной школе-студии
         </p>
         <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noreferrer noopener"
+          href="tel:+79162353381"
           className="inline-flex items-center gap-2 px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
         >
           Запишись на пробный урок
@@ -66,7 +62,6 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Build WhatsApp message from form data
     const disciplineLabels: Record<string, string> = {
       guitar: "Гитара", vocal: "Вокал", piano: "Фортепиано",
       ukulele: "Укулеле", songwriting: "Написание песен", ensemble: "Ансамбль",
@@ -75,10 +70,8 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
       beginner: "Начинающий", intermediate: "Средний", advanced: "Продвинутый",
     };
     const text = `Запись на занятие\nДисциплина: ${disciplineLabels[discipline] || discipline}\nУровень: ${levelLabels[level] || level}\nТелефон: ${phone}\n${comments ? `Комментарий: ${comments}` : ""}`;
-    window.open(
-      `https://api.whatsapp.com/send/?phone=79162353381&text=${encodeURIComponent(text)}&type=phone_number&app_absent=0`,
-      "_blank"
-    );
+    const mailto = `mailto:soundaround.club@yandex.ru?subject=${encodeURIComponent("Запись на занятие")}&body=${encodeURIComponent(text)}`;
+    window.open(mailto);
   };
 
   return (
@@ -232,7 +225,6 @@ const SocialCTA = () => {
   const socials = [
     { name: "Instagram", icon: <Instagram size={32} />, href: "https://www.instagram.com/sa_musstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" },
     { name: "Telegram", icon: <Send size={32} />, href: "https://t.me/soundaround_club" },
-    { name: "WhatsApp", icon: <MessageCircle size={32} />, href: WHATSAPP_URL },
     { name: "Вконтакте", icon: <span className="text-2xl font-heading font-bold">ВК</span>, href: "https://vk.com/studiozv" },
   ];
 

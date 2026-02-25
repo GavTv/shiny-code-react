@@ -22,9 +22,7 @@ const CTASection = () => {
         {/* Right actions */}
         <div className="flex flex-col items-end gap-4">
           <a
-            href="https://api.whatsapp.com/send/?phone=79162353381&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9+%D0%B4%D0%B5%D0%BD%D1%8C%21+%D0%A5%D0%BE%D1%87%D1%83+%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F+%D0%BD%D0%B0+%D0%BF%D1%80%D0%BE%D0%B1%D0%BD%D0%BE%D0%B5+%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noreferrer noopener"
+            href="tel:+79162353381"
             className="inline-flex items-center px-6 py-4 text-lg font-body font-semibold text-accent-foreground bg-accent rounded-2xl shadow-lg transition-all duration-200 hover:opacity-90"
           >
             Записаться сейчас
@@ -32,7 +30,6 @@ const CTASection = () => {
           <div className="flex gap-3">
             {[
               { href: "tel:+79162353381", label: "Позвонить", icon: Phone },
-              { href: "https://wa.me/79162353381", label: "WhatsApp", icon: PhoneCall },
               { href: "https://t.me/79162353381", label: "Telegram", icon: PhoneCall },
             ].map((c) => {
               const Icon = c.icon;
