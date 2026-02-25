@@ -1,35 +1,47 @@
 import { Mic, Guitar, Music, Headphones } from "lucide-react";
+import vocalImg from "@/assets/disciplines/vocal.webp";
+import guitarImg from "@/assets/disciplines/guitar.webp";
+import pianoImg from "@/assets/disciplines/piano.webp";
+import ukuleleImg from "@/assets/disciplines/ukulele.jpg";
+import songwritingImg from "@/assets/disciplines/songwriting.jpg";
+import ensembleImg from "@/assets/disciplines/ensemble.webp";
 
 const disciplines = [
   {
     icon: <Mic size={48} />,
     title: "Вокал",
     description: "Обучение современному пению с упором на дыхание, звучание и технику исполнения.",
+    image: vocalImg,
   },
   {
     icon: <Guitar size={48} />,
     title: "Гитара",
     description: "От простых аккордов до сложных композиций. Акустическая и электрогитара. Любые стили и направления.",
+    image: guitarImg,
   },
   {
     icon: <Music size={48} />,
     title: "Фортепиано",
     description: "От основ игры на клавишах до джазовых аккордов, игры под песню и импровизации в ансамбле.",
+    image: pianoImg,
   },
   {
     icon: <Guitar size={48} />,
     title: "Укулеле",
     description: "От основ игры на укулеле до джазовых аккордов, боя под песни и создания мелодий.",
+    image: ukuleleImg,
   },
   {
     icon: <Headphones size={48} />,
     title: "Написание песен",
     description: "Совместные мастер-классы по созданию текстов, мелодии, аранжировке и стратегии выпуска.",
+    image: songwritingImg,
   },
   {
     icon: <Mic size={48} />,
     title: "Вокальный ансамбль",
     description: "Маленькие ансамбли и группы, которые отрабатывают песни и навыки живых выступлений.",
+    image: ensembleImg,
   },
 ];
 
@@ -54,9 +66,12 @@ const DisciplinesGrid = () => {
                   {d.description}
                 </p>
               </div>
-              {/* Image placeholder */}
               <div className="w-full h-[200px] overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 transition-transform duration-500 group-hover:scale-105" />
+                <img
+                  src={d.image}
+                  alt={d.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
             </div>
           ))}
