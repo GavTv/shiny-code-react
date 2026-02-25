@@ -117,7 +117,7 @@ const TeachersSection = () => {
               className="group bg-card rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
             >
               {/* Photo */}
-              <div className="w-full aspect-[3/4] overflow-hidden">
+              <div className="w-full h-[160px] md:h-[180px] overflow-hidden">
                 {teacher.photo ? (
                   <img
                     src={teacher.photo}
