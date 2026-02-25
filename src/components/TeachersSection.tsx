@@ -1,4 +1,8 @@
 import { Mic, Guitar, Headphones, User } from "lucide-react";
+import nastyaImg from "@/assets/teachers/nastya.webp";
+import aleksandraImg from "@/assets/teachers/aleksandra.webp";
+import borisImg from "@/assets/teachers/boris.webp";
+import kirillImg from "@/assets/teachers/kirill.webp";
 
 interface Teacher {
   name: string;
@@ -6,6 +10,7 @@ interface Teacher {
   specialtyEmoji: string;
   icon: React.ReactNode;
   description: string[];
+  photo?: string;
 }
 
 const teachers: Teacher[] = [
@@ -14,6 +19,7 @@ const teachers: Teacher[] = [
     specialty: "Гитара",
     specialtyEmoji: "🎸",
     icon: <Mic size={20} />,
+    photo: undefined,
     description: [
       "Саша — педагог по гитаре, профессиональный музыкант.",
       "Образование: Старооскольская Музыкальная Школа.",
@@ -27,6 +33,7 @@ const teachers: Teacher[] = [
     specialty: "Вокал",
     specialtyEmoji: "🎤",
     icon: <Guitar size={20} />,
+    photo: nastyaImg,
     description: [
       "Анастасия — педагог эстрадного вокала.",
       "Образование (Свердловское училище с отличием, Berklee, HSE).",
@@ -41,6 +48,7 @@ const teachers: Teacher[] = [
     specialty: "Вокал",
     specialtyEmoji: "🎤",
     icon: <Mic size={20} />,
+    photo: aleksandraImg,
     description: [
       "Александра — выпускница ГМУЭДИ (колледжа при Академии им. Гнесиных), педагог эстрадного вокала, артист и руководитель коллектива.",
       "Обучает техникам качественного и свободного звукоизвлечения, работает с вокальными стилями: поп, R&B, мюзиклы, альтернативу и рок.",
@@ -53,6 +61,7 @@ const teachers: Teacher[] = [
     specialty: "Вокал и актёрское мастерство",
     specialtyEmoji: "🎤",
     icon: <Mic size={20} />,
+    photo: undefined,
     description: [
       "Александра — педагог по вокалу, профессиональная певица и актриса.",
       "Образование: Алтайская академия искусств и культуры, Институт современного искусства (эстрадно-джазовый вокал).",
@@ -65,6 +74,7 @@ const teachers: Teacher[] = [
     specialty: "Укулеле & Гитара",
     specialtyEmoji: "🎸",
     icon: <Guitar size={20} />,
+    photo: borisImg,
     description: [
       "Борис — педагог по гитаре.",
       "Выпускник МОМК им. Прокофьева с отличием, лауреат конкурсов.",
@@ -78,6 +88,7 @@ const teachers: Teacher[] = [
     specialty: "Гитара",
     specialtyEmoji: "🎸",
     icon: <Headphones size={20} />,
+    photo: kirillImg,
     description: [
       "Кирилл — педагог по гитаре.",
       "Образование: Московский Педагогический Государственный Университет.",
@@ -103,11 +114,19 @@ const TeachersSection = () => {
               key={idx}
               className="group bg-card rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Photo placeholder */}
-              <div className="w-full h-[280px] md:h-[320px] overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-                  <User size={64} className="text-primary/40" />
-                </div>
+              {/* Photo */}
+              <div className="w-full h-[220px] md:h-[260px] overflow-hidden">
+                {teacher.photo ? (
+                  <img
+                    src={teacher.photo}
+                    alt={teacher.name}
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                    <User size={64} className="text-primary/40" />
+                  </div>
+                )}
               </div>
               {/* Content */}
               <div className="p-6">
