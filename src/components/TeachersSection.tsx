@@ -1,6 +1,8 @@
 import { Mic, Guitar, Headphones, User } from "lucide-react";
+import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
+import aleksandra2Img from "@/assets/teachers/aleksandra2.jpg";
 import borisImg from "@/assets/teachers/boris.webp";
 import kirillImg from "@/assets/teachers/kirill.webp";
 
@@ -19,7 +21,7 @@ const teachers: Teacher[] = [
     specialty: "Гитара",
     specialtyEmoji: "🎸",
     icon: <Mic size={20} />,
-    photo: undefined,
+    photo: aleksandrImg,
     description: [
       "Саша — педагог по гитаре, профессиональный музыкант.",
       "Образование: Старооскольская Музыкальная Школа.",
@@ -61,7 +63,7 @@ const teachers: Teacher[] = [
     specialty: "Вокал и актёрское мастерство",
     specialtyEmoji: "🎤",
     icon: <Mic size={20} />,
-    photo: undefined,
+    photo: aleksandra2Img,
     description: [
       "Александра — педагог по вокалу, профессиональная певица и актриса.",
       "Образование: Алтайская академия искусств и культуры, Институт современного искусства (эстрадно-джазовый вокал).",
