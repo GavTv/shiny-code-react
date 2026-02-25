@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Instagram, Send, Phone, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Главная", to: "/" },
@@ -41,11 +42,7 @@ const Navigation = () => {
       <div className="max-w-[84rem] mx-auto flex items-center justify-between px-6 py-4 gap-8">
         {/* Logo */}
         <Link to="/" className="transition-transform hover:-translate-y-0.5">
-          <div className="w-[200px] h-[90px] bg-primary/10 rounded-lg flex items-center justify-center">
-            <span className="font-heading font-bold text-xl bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-              Звук Вокруг
-            </span>
-          </div>
+          <img src={logo} alt="Звук Вокруг" className="h-[70px] w-auto" />
         </Link>
 
         {/* Desktop nav */}
