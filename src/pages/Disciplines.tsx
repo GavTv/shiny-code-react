@@ -1,6 +1,10 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
 import { useState } from "react";
+import Navigation from "@/components/Navigation";
+import DisciplinesHero from "@/components/DisciplinesHero";
+import DisciplinesGrid from "@/components/DisciplinesGrid";
+import PricingSection from "@/components/PricingSection";
+import { DisciplinesCTA, ContactInfoSection } from "@/components/DisciplinesCTA";
+import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
 
 const Disciplines = () => {
@@ -8,9 +12,11 @@ const Disciplines = () => {
   return (
     <div className="w-full min-h-screen">
       <Navigation />
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <h1 className="text-4xl font-heading font-bold text-foreground">Дисциплины</h1>
-      </div>
+      <DisciplinesHero />
+      <DisciplinesGrid />
+      <PricingSection />
+      <DisciplinesCTA />
+      <ContactInfoSection />
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
     </div>
