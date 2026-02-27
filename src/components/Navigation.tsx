@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Instagram, Send, Phone } from "lucide-react";
+import { Menu, X, Send, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
@@ -11,7 +11,6 @@ const navLinks = [
 ];
 
 const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/sa_musstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D", icon: Instagram },
   { label: "Telegram", href: "https://t.me/soundaround_club", icon: Send },
   { label: "ВКонтакте", href: "https://vk.com/studiozv", icon: () => <span className="text-xs font-heading font-bold">ВК</span> },
 ];

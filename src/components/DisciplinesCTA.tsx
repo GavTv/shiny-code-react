@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram, Send } from "lucide-react";
+import { Phone, Mail, Send } from "lucide-react";
 
 const DisciplinesCTA = () => {
   return (
@@ -27,7 +27,6 @@ const DisciplinesCTA = () => {
 
 const ContactInfoSection = () => {
   const socials = [
-    { name: "Instagram", icon: <Instagram size={32} />, href: "https://www.instagram.com/sa_musstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" },
     { name: "Telegram", icon: <Send size={32} />, href: "https://t.me/soundaround_club" },
     { name: "ВКонтакте", icon: <span className="text-2xl font-heading font-bold">ВК</span>, href: "https://vk.com/studiozv" },
   ];
