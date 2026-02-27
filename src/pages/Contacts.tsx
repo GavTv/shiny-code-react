@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import { ContactHero, QuickContact, FeedbackForm, LocationsSection, SocialCTA } from "@/components/ContactSections";
+import { ContactHero, QuickContact, FeedbackForm, LocationsSection } from "@/components/ContactSections";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
 
@@ -13,7 +13,7 @@ const Contacts = () => {
       <QuickContact />
       <FeedbackForm onPrivacyOpen={() => setPrivacyOpen(true)} />
       <LocationsSection />
-      <SocialCTA />
+      
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
     </div>
