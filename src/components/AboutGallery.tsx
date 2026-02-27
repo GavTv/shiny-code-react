@@ -25,7 +25,7 @@ const AboutGallery = () => {
         {/* Photo mosaic */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-5">
           <div className="relative rounded-[16px] overflow-hidden h-[260px] md:h-[420px]">
-            <img src={studio3} alt="Студия Звук Вокруг" className="w-full h-full object-cover" />
+            <img src={studio3} alt="Студия Звук Вокруг" className="w-full h-full object-cover object-bottom" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
               <h3 className="font-heading text-2xl font-bold text-white">
                 Музыка есть счастье
@@ -33,10 +33,10 @@ const AboutGallery = () => {
             </div>
           </div>
           <div className="rounded-[16px] overflow-hidden h-[200px] md:h-[420px]">
-            <img src={studio1} alt="Занятие вокалом" className="w-full h-full object-cover" />
+            <img src={studio1} alt="Занятие вокалом" className="w-full h-full object-cover object-bottom" />
           </div>
           <div className="rounded-[16px] overflow-hidden h-[200px] md:h-[420px]">
-            <img src={studio2} alt="Урок гитары" className="w-full h-full object-cover" />
+            <img src={studio2} alt="Урок гитары" className="w-full h-full object-cover object-bottom" />
           </div>
         </div>
       </div>
