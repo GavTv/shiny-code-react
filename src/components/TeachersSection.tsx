@@ -141,7 +141,7 @@ const TeachersSection = () => {
                     {teacher.specialty} {teacher.specialtyEmoji}
                   </span>
                 </div>
-                <div className="space-y-1 md:space-y-2 hidden md:block">
+                <div className="space-y-1 md:space-y-2">
                   {teacher.description.map((line, i) => (
                     <p key={i} className="font-body text-xs md:text-sm text-muted-foreground leading-relaxed">
                       {line}
