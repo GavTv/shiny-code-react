@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail, MapPin, Instagram, Send, Music } from "lucide-react";
+import { Phone, Mail, MapPin, Send, Music } from "lucide-react";
 
 /* ─── Hero ─── */
 const ContactHero = () => (
@@ -223,7 +223,6 @@ const LocationsSection = () => (
 /* ─── Social CTA ─── */
 const SocialCTA = () => {
   const socials = [
-    { name: "Instagram", icon: <Instagram size={32} />, href: "https://www.instagram.com/sa_musstudio/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" },
     { name: "Telegram", icon: <Send size={32} />, href: "https://t.me/soundaround_club" },
     { name: "Вконтакте", icon: <span className="text-2xl font-heading font-bold">ВК</span>, href: "https://vk.com/studiozv" },
   ];

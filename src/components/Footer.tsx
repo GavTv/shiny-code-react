@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Instagram, Send, Phone, Mail, MapPin } from "lucide-react";
+import { Send, Phone, Mail, MapPin } from "lucide-react";
 
 interface FooterProps {
   onPrivacyOpen: () => void;
@@ -27,7 +27,6 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
               <span className="text-sm font-body font-semibold text-foreground">Присоединяйтесь к нам:</span>
               <div className="flex gap-3">
                 {[
-                  { label: "Instagram", href: "https://www.instagram.com/sa_musstudio/", icon: Instagram },
                   { label: "Telegram", href: "https://t.me/soundaround_club", icon: Send },
                   { label: "ВК", href: "https://vk.com/studiozv", icon: () => <span className="text-sm font-heading font-bold">ВК</span> },
                 ].map((s) => {
