@@ -18,10 +18,10 @@ const FounderHero = () => {
           </div>
           {/* Text */}
           <div className="flex-1 text-center md:text-left">
-            <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-1 md:mb-2">
+            <h1 className="font-heading text-2xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-1 md:mb-2">
               Анна<br />Жирова
             </h1>
-            <p className="text-primary font-heading font-semibold text-base md:text-xl mb-3 md:mb-6">
+            <p className="text-primary font-heading font-semibold text-sm md:text-xl mb-3 md:mb-6">
               Основатель
             </p>
 
