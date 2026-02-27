@@ -102,22 +102,22 @@ const teachers: Teacher[] = [
 
 const TeachersSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
-      <div className="max-w-[84rem] mx-auto px-6">
-        <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">
+    <section className="py-10 md:py-24 bg-muted/30">
+      <div className="max-w-[84rem] mx-auto px-4 md:px-6">
+        <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground text-center mb-2 md:mb-3">
           Наши преподаватели
         </h2>
-        <p className="text-center text-muted-foreground font-body text-lg mb-12">
+        <p className="text-center text-muted-foreground font-body text-sm md:text-lg mb-6 md:mb-12">
           Познакомьтесь с нашей командой профессионалов
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {teachers.map((teacher, idx) => (
             <article
               key={idx}
-              className="group bg-card rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
+              className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
             >
               {/* Photo */}
-              <div className="w-full aspect-[3/4] overflow-hidden">
+              <div className="w-full aspect-square md:aspect-[3/4] overflow-hidden">
                 {teacher.photo ? (
                   <img
                     src={teacher.photo}
@@ -131,19 +131,19 @@ const TeachersSection = () => {
                 )}
               </div>
               {/* Content */}
-              <div className="p-6">
-                <h3 className="font-heading text-xl font-bold text-foreground mb-2">
+              <div className="p-3 md:p-6">
+                <h3 className="font-heading text-sm md:text-xl font-bold text-foreground mb-1 md:mb-2">
                   {teacher.name}
                 </h3>
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="text-primary">{teacher.icon}</span>
-                  <span className="font-body text-sm text-muted-foreground">
+                <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-4">
+                  <span className="text-primary [&>svg]:w-3.5 [&>svg]:h-3.5 md:[&>svg]:w-5 md:[&>svg]:h-5">{teacher.icon}</span>
+                  <span className="font-body text-[11px] md:text-sm text-muted-foreground">
                     {teacher.specialty} {teacher.specialtyEmoji}
                   </span>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-1 md:space-y-2 hidden md:block">
                   {teacher.description.map((line, i) => (
-                    <p key={i} className="font-body text-sm text-muted-foreground leading-relaxed">
+                    <p key={i} className="font-body text-xs md:text-sm text-muted-foreground leading-relaxed">
                       {line}
                     </p>
                   ))}
