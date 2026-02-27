@@ -45,7 +45,7 @@ const Navigation = () => {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center justify-center flex-1 gap-12">
           <ul className="flex items-center gap-6 list-none m-0 p-0">
             {navLinks.map((link) => (
               <li key={link.to}>
