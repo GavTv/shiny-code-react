@@ -78,10 +78,22 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
         </div>
 
         {/* Bottom */}
-        <div className="flex items-center justify-center border-t border-border/40 pt-4 md:pt-6">
-          <p className="text-muted-foreground text-xs font-body">
+        <div className="flex flex-col items-center gap-1 border-t border-border/40 pt-3 md:pt-4">
+          <p className="text-muted-foreground text-[10px] font-body">
             © 2025 Студия Звук Вокруг. Все права защищены.
           </p>
+          <div className="flex items-center gap-1.5">
+            <button
+              onClick={onPrivacyOpen}
+              className="text-muted-foreground text-[10px] font-body transition-colors hover:text-primary cursor-pointer bg-transparent border-none p-0"
+            >
+              Политика конфиденциальности
+            </button>
+            <span className="text-muted-foreground text-[10px]">•</span>
+            <a href="#" className="text-muted-foreground text-[10px] font-body transition-colors hover:text-primary">
+              Условия использования
+            </a>
+          </div>
         </div>
       </div>
     </footer>
