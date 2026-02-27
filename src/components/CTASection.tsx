@@ -2,18 +2,19 @@ import { Mic, Phone, PhoneCall } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="w-full py-8 px-5 bg-gradient-to-br from-primary to-secondary">
-      <div className="max-w-[84rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <section className="w-full py-6 md:py-8 px-4 md:px-5 bg-gradient-to-br from-primary to-secondary">
+      <div className="max-w-[84rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
         {/* Left content */}
-        <div className="flex items-start gap-5 flex-1">
-          <div className="w-16 h-16 rounded-2xl bg-background text-primary flex items-center justify-center shadow-lg flex-shrink-0">
-            <Mic size={32} />
+        <div className="flex items-start gap-3 md:gap-5 flex-1">
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-background text-primary flex items-center justify-center shadow-lg flex-shrink-0">
+            <Mic size={20} className="md:hidden" />
+            <Mic size={32} className="hidden md:block" />
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="text-xl font-heading font-bold text-primary-foreground leading-snug">
+          <div className="flex flex-col gap-1 md:gap-2">
+            <h3 className="text-base md:text-xl font-heading font-bold text-primary-foreground leading-snug">
               Запишись на пробный урок — первое занятие 1000 руб.
             </h3>
-            <p className="text-primary-foreground/95 text-base leading-relaxed">
+            <p className="text-primary-foreground/95 text-xs md:text-base leading-relaxed">
               Познакомьтесь с преподавателями и студией
             </p>
           </div>
