@@ -186,7 +186,7 @@ const LocationsSection = () => (
         Где нас найти
       </h2>
       <p className="text-center text-muted-foreground font-body text-lg mb-12">
-        Мы работаем в двух студиях в Москве. Выбирайте ближайшую к вам локацию и приходите на пробный урок!
+        Мы принимаем клиентов в нашей студии в Москве. Приходите на пробный урок в удобное для вас время!
       </p>
       <div className="max-w-md mx-auto">
         <article className="relative bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)] overflow-hidden">
