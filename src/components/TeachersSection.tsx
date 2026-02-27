@@ -143,7 +143,7 @@ const TeachersSection = () => {
                 </div>
                 <div className="space-y-1 md:space-y-2">
                   {teacher.description.map((line, i) => (
-                    <p key={i} className="font-body text-xs md:text-sm text-muted-foreground leading-relaxed">
+                    <p key={i} className="font-body text-[10px] md:text-sm text-muted-foreground leading-snug md:leading-relaxed">
                       {line}
                     </p>
                   ))}
