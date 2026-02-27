@@ -1,4 +1,5 @@
-import { Mic, Guitar, Headphones, User } from "lucide-react";
+import { useState } from "react";
+import { Mic, Guitar, Headphones, User, ChevronDown } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
@@ -100,56 +101,51 @@ const teachers: Teacher[] = [
   },
 ];
 
+const TeacherCard = ({ teacher }: { teacher: Teacher }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <article
+      className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1 cursor-pointer md:cursor-default"
+      onClick={() => setOpen((v) => !v)}
+    >
+      <div className="w-full aspect-square md:aspect-[3/4] overflow-hidden">
+        {teacher.photo ? (
+          <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
+            <User size={64} className="text-primary/40" />
+          </div>
+        )}
+      </div>
+      <div className="p-3 md:p-6">
+        <h3 className="font-heading text-sm md:text-xl font-bold text-foreground mb-1 md:mb-2">{teacher.name}</h3>
+        <div className="flex items-center justify-between mb-2 md:mb-4">
+          <div className="flex items-center gap-1 md:gap-2">
+            <span className="text-primary [&>svg]:w-3.5 [&>svg]:h-3.5 md:[&>svg]:w-5 md:[&>svg]:h-5">{teacher.icon}</span>
+            <span className="font-body text-[11px] md:text-sm text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
+          </div>
+          <ChevronDown size={14} className={`md:hidden text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+        </div>
+        <div className={`space-y-1 md:space-y-2 overflow-hidden transition-all duration-300 ${open ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"} md:!max-h-none md:!opacity-100`}>
+          {teacher.description.map((line, i) => (
+            <p key={i} className="font-body text-[11px] md:text-sm text-muted-foreground leading-snug md:leading-relaxed">{line}</p>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+};
+
 const TeachersSection = () => {
   return (
     <section className="py-10 md:py-24 bg-muted/30">
       <div className="max-w-[84rem] mx-auto px-4 md:px-6">
-        <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground text-center mb-2 md:mb-3">
-          Наши преподаватели
-        </h2>
-        <p className="text-center text-muted-foreground font-body text-sm md:text-lg mb-6 md:mb-12">
-          Познакомьтесь с нашей командой профессионалов
-        </p>
+        <h2 className="font-heading text-2xl md:text-4xl font-bold text-foreground text-center mb-2 md:mb-3">Наши преподаватели</h2>
+        <p className="text-center text-muted-foreground font-body text-sm md:text-lg mb-6 md:mb-12">Познакомьтесь с нашей командой профессионалов</p>
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
           {teachers.map((teacher, idx) => (
-            <article
-              key={idx}
-              className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* Photo */}
-              <div className="w-full aspect-square md:aspect-[3/4] overflow-hidden">
-                {teacher.photo ? (
-                  <img
-                    src={teacher.photo}
-                    alt={teacher.name}
-                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                  />
-                ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
-                    <User size={64} className="text-primary/40" />
-                  </div>
-                )}
-              </div>
-              {/* Content */}
-              <div className="p-3 md:p-6">
-                <h3 className="font-heading text-sm md:text-xl font-bold text-foreground mb-1 md:mb-2">
-                  {teacher.name}
-                </h3>
-                <div className="flex items-center gap-1 md:gap-2 mb-2 md:mb-4">
-                  <span className="text-primary [&>svg]:w-3.5 [&>svg]:h-3.5 md:[&>svg]:w-5 md:[&>svg]:h-5">{teacher.icon}</span>
-                  <span className="font-body text-[11px] md:text-sm text-muted-foreground">
-                    {teacher.specialty} {teacher.specialtyEmoji}
-                  </span>
-                </div>
-                <div className="space-y-1 md:space-y-2">
-                  {teacher.description.map((line, i) => (
-                    <p key={i} className="font-body text-[10px] md:text-sm text-muted-foreground leading-snug md:leading-relaxed">
-                      {line}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            </article>
+            <TeacherCard key={idx} teacher={teacher} />
           ))}
         </div>
       </div>
