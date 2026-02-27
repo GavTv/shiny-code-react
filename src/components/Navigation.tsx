@@ -41,7 +41,7 @@ const Navigation = () => {
       <div className="max-w-[84rem] mx-auto flex items-center justify-between px-6 py-3 gap-4">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 transition-transform hover:-translate-y-0.5">
-          <img src={logo} alt="Звук Вокруг" className="h-20 w-auto" />
+          <img src={logo} alt="Звук Вокруг" className="h-28 w-auto" />
         </Link>
 
         {/* Desktop nav */}
