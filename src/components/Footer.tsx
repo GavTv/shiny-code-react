@@ -16,37 +16,7 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
       <div className="relative z-[2] max-w-[84rem] mx-auto px-8">
         {/* Grid */}
         <div className="flex flex-col md:flex-row gap-12 mb-12">
-          {/* Brand column */}
-          <div className="flex-[1.5] min-w-0">
-            <div className="w-[160px] h-[70px] bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-              <span className="font-heading font-bold text-lg bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">
-                Звук Вокруг
-              </span>
-            </div>
-            <div className="flex flex-col gap-3 mt-4">
-              <span className="text-sm font-body font-semibold text-foreground">Присоединяйтесь к нам:</span>
-              <div className="flex gap-3">
-                {[
-                  { label: "Telegram", href: "https://t.me/soundaround_club", icon: Send },
-                  { label: "ВК", href: "https://vk.com/studiozv", icon: () => <span className="text-sm font-heading font-bold">ВК</span> },
-                ].map((s) => {
-                  const Icon = s.icon;
-                  return (
-                    <a
-                      key={s.label}
-                      href={s.href}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      aria-label={s.label}
-                      className="w-12 h-12 rounded-2xl bg-muted border border-primary/15 text-primary flex items-center justify-center shadow-sm transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:shadow-lg"
-                    >
-                      <Icon size={24} />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+
 
           {/* Navigation */}
           <div className="flex-1 min-w-0">
