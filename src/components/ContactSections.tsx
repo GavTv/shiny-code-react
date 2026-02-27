@@ -3,20 +3,20 @@ import { Phone, Mail, MapPin, Send, Music } from "lucide-react";
 
 /* ─── Hero ─── */
 const ContactHero = () => (
-  <section className="relative py-20 md:py-28 overflow-hidden">
+  <section className="relative py-12 md:py-28 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-    <div className="relative z-10 max-w-[84rem] mx-auto px-6 flex items-center justify-center">
-      <div className="bg-card/80 backdrop-blur-sm rounded-[24px] p-8 md:p-12 text-center shadow-[0_24px_60px_rgba(100,50,200,0.25)] max-w-2xl">
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <div className="relative z-10 max-w-[84rem] mx-auto px-4 md:px-6 flex items-center justify-center">
+      <div className="bg-card/80 backdrop-blur-sm rounded-xl md:rounded-[24px] p-6 md:p-12 text-center shadow-[0_24px_60px_rgba(100,50,200,0.25)] max-w-2xl">
+        <h1 className="font-heading text-2xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">
           Наша Связь
         </h1>
-        <p className="font-body text-muted-foreground text-lg mb-8">
+        <p className="font-body text-muted-foreground text-sm md:text-lg mb-4 md:mb-8">
           Откройте для себя свой голос, инструмент или сценическое мастерство в уютной музыкальной школе-студии
         </p>
         <a
           href="tel:+79162353381"
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
+          className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-sm md:text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
         >
           Запишись на пробный урок
         </a>
