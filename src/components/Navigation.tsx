@@ -38,10 +38,10 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 w-full z-[1000] bg-background border-b border-border">
-      <div className="max-w-[84rem] mx-auto flex items-center justify-between px-6 py-4 gap-8">
+      <div className="max-w-[84rem] mx-auto flex items-center justify-between px-6 py-3 gap-4">
         {/* Logo */}
-        <Link to="/" className="transition-transform hover:-translate-y-0.5">
-          <img src={logo} alt="Звук Вокруг" className="h-10 w-auto" />
+        <Link to="/" className="flex-shrink-0 transition-transform hover:-translate-y-0.5">
+          <img src={logo} alt="Звук Вокруг" className="h-20 w-auto" />
         </Link>
 
         {/* Desktop nav */}
