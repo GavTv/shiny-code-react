@@ -44,8 +44,8 @@ const Navigation = () => {
           <img src={logo} alt="Звук Вокруг" className="h-28 w-auto" />
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center justify-center flex-1 gap-12">
+        {/* Desktop nav - centered links */}
+        <div className="hidden md:flex items-center justify-center flex-1">
           <ul className="flex items-center gap-6 list-none m-0 p-0">
             {navLinks.map((link) => (
               <li key={link.to}>
@@ -58,23 +58,25 @@ const Navigation = () => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3">
-            {socials.map((s) => {
-              const Icon = s.icon;
-              return (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  aria-label={s.label}
-                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-primary border border-transparent transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
-                >
-                  <Icon size={20} />
-                </a>
-              );
-            })}
-          </div>
+        </div>
+
+        {/* Desktop socials - right */}
+        <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+          {socials.map((s) => {
+            const Icon = s.icon;
+            return (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label={s.label}
+                className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-primary border border-transparent transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:-translate-y-1 hover:scale-105 hover:shadow-lg"
+              >
+                <Icon size={20} />
+              </a>
+            );
+          })}
         </div>
 
         {/* Mobile toggle */}
