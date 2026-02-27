@@ -33,10 +33,10 @@ const AboutGallery = () => {
             </div>
           </div>
           <div className="rounded-[16px] overflow-hidden aspect-[4/3]">
-            <img src={studio1} alt="Занятие вокалом" className="w-full h-full object-cover object-center" />
+            <img src={studio1} alt="Занятие вокалом" className="w-full h-full object-cover object-[center_70%]" />
           </div>
           <div className="rounded-[16px] overflow-hidden aspect-[4/3]">
-            <img src={studio2} alt="Урок гитары" className="w-full h-full object-cover object-center" />
+            <img src={studio2} alt="Урок гитары" className="w-full h-full object-cover object-[center_70%]" />
           </div>
         </div>
       </div>
