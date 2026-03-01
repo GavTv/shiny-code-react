@@ -12,7 +12,7 @@ const FounderHero = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-16">
           {/* Photo */}
           <div className="flex-shrink-0">
-            <div className="w-[180px] h-[240px] md:w-[280px] md:h-[380px] rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(100,50,200,0.25)] border-4 border-primary/20">
+            <div className="w-[220px] h-[300px] md:w-[340px] md:h-[460px] rounded-[24px] overflow-hidden shadow-[0_24px_60px_rgba(100,50,200,0.25)] border-4 border-primary/20">
               <img src={annaImg} alt="Анна Жирова" className="w-full h-full object-cover object-top" />
             </div>
           </div>
