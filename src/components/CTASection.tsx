@@ -1,9 +1,10 @@
 import { Mic, Phone, PhoneCall } from "lucide-react";
+import ctaPerson from "@/assets/cta-person.jpg";
 
 const CTASection = () => {
   return (
-    <section className="w-full py-6 md:py-8 px-4 md:px-5 bg-gradient-to-br from-primary to-secondary">
-      <div className="max-w-[84rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
+    <section className="w-full py-6 md:py-8 px-4 md:px-5 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
+      <div className="max-w-[84rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 relative z-10">
         {/* Left content */}
         <div className="flex items-start gap-3 md:gap-5 flex-1">
           <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-background text-primary flex items-center justify-center shadow-lg flex-shrink-0">
@@ -18,6 +19,15 @@ const CTASection = () => {
               Познакомьтесь с преподавателями и студией
             </p>
           </div>
+        </div>
+
+        {/* Person photo */}
+        <div className="w-[120px] h-[120px] md:w-[160px] md:h-[160px] rounded-full overflow-hidden border-4 border-background/30 shadow-xl flex-shrink-0">
+          <img
+            src={ctaPerson}
+            alt="Преподаватель"
+            className="w-full h-full object-cover object-top"
+          />
         </div>
 
         {/* Right actions */}
