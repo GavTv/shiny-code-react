@@ -133,6 +133,8 @@ const Navigation = () => {
                   <a
                     key={s.label}
                     href={s.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="flex items-center gap-3 px-4 py-3 text-sm font-body font-semibold bg-muted rounded-lg border border-transparent transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:-translate-y-0.5"
                   >
                     <Icon size={24} />
