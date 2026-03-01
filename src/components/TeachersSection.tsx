@@ -109,7 +109,7 @@ const TeacherCard = ({ teacher }: { teacher: Teacher }) => {
       className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-all duration-300 hover:-translate-y-1 cursor-pointer md:cursor-default"
       onClick={() => setOpen((v) => !v)}
     >
-      <div className="w-full aspect-square md:aspect-[3/4] overflow-hidden">
+      <div className="w-full aspect-[3/4] overflow-hidden">
         {teacher.photo ? (
           <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" />
         ) : (
