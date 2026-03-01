@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
+import ctaPerson from "@/assets/cta-person.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background placeholder */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/10" />
+      {/* Background photo */}
+      <div className="absolute inset-0 z-[1]">
+        <img src={ctaPerson} alt="" className="w-full h-full object-cover object-[center_20%]" />
+      </div>
       
       {/* Overlay */}
-      <div className="absolute inset-0 z-[2] bg-black/50" />
+      <div className="absolute inset-0 z-[2] bg-black/40" />
 
       {/* Content */}
       <div className="relative z-[3] w-full max-w-[84rem] flex flex-col items-center text-center gap-12 px-5 py-12">
