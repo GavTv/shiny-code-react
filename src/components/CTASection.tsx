@@ -31,7 +31,7 @@ const CTASection = () => {
           <div className="flex gap-3">
             {[
               { href: "tel:+79162353381", label: "Позвонить", icon: Phone },
-              { href: "https://t.me/79162353381", label: "Telegram", icon: PhoneCall },
+              { href: "https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20Zoon", label: "Telegram", icon: PhoneCall },
             ].map((c) => {
               const Icon = c.icon;
               return (
