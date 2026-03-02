@@ -15,12 +15,12 @@ const disciplineImages: Record<string, string> = {
   piano: formPianoImg,
   ukulele: formUkuleleImg,
   songwriting: formSongwritingImg,
-  ensemble: formEnsembleImg,
+  ensemble: formEnsembleImg
 };
 
 /* ─── Hero ─── */
-const ContactHero = () => (
-  <section className="relative py-12 md:py-28 overflow-hidden">
+const ContactHero = () =>
+<section className="relative py-12 md:py-28 overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
     <div className="relative z-10 max-w-[84rem] mx-auto px-4 md:px-6 flex items-center justify-center">
@@ -32,19 +32,19 @@ const ContactHero = () => (
           Откройте для себя свой голос, инструмент или сценическое мастерство в уютной музыкальной школе-студии
         </p>
         <a
-          href="tel:+79162353381"
-          className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-sm md:text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
-        >
+        href="tel:+79162353381"
+        className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-sm md:text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
+        
           Запишись на пробный урок
         </a>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ─── Quick Contact Cards ─── */
-const QuickContact = () => (
-  <section className="py-12">
+const QuickContact = () =>
+<section className="py-12">
     <div className="max-w-[84rem] mx-auto px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         <div className="bg-card rounded-[24px] p-8 text-center shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
@@ -67,11 +67,11 @@ const QuickContact = () => (
         </div>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ─── Feedback Form ─── */
-const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
+const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
   const [discipline, setDiscipline] = useState("");
   const [level, setLevel] = useState("");
   const [phone, setPhone] = useState("");
@@ -92,14 +92,14 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
 
     try {
       const { data, error } = await supabase.functions.invoke("send-to-telegram", {
-        body: { discipline, level, phone, promo: trimmedPromo, comments },
+        body: { discipline, level, phone, promo: trimmedPromo, comments }
       });
 
       if (error) throw error;
 
       toast("Мы скоро с вами свяжемся! 🎶", {
         description: "Ваша заявка получена, ожидайте звонка.",
-        duration: 5000,
+        duration: 5000
       });
       setDiscipline("");
       setLevel("");
@@ -109,7 +109,7 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
     } catch (err) {
       console.error(err);
       toast.error("Не удалось отправить заявку", {
-        description: "Попробуйте позже или свяжитесь с нами по телефону.",
+        description: "Попробуйте позже или свяжитесь с нами по телефону."
       });
     } finally {
       setSending(false);
@@ -122,14 +122,14 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
           {/* Image placeholder */}
           <div className="relative rounded-[24px] overflow-hidden min-h-[400px]">
-            {discipline && disciplineImages[discipline] ? (
-              <img
-                src={disciplineImages[discipline]}
-                alt={discipline}
-                className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500"
-              />
-            ) : (
-              <>
+            {discipline && disciplineImages[discipline] ?
+            <img
+              src={disciplineImages[discipline]}
+              alt={discipline}
+              className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" /> :
+
+
+            <>
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
@@ -137,7 +137,7 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                   </div>
                 </div>
               </>
-            )}
+            }
           </div>
           {/* Form */}
           <div className="bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
@@ -156,8 +156,8 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                   value={discipline}
                   onChange={(e) => setDiscipline(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50"
-                >
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50">
+                  
                   <option value="">Выберите...</option>
                   <option value="guitar">Гитара</option>
                   <option value="vocal">Вокал</option>
@@ -175,8 +175,8 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                   value={level}
                   onChange={(e) => setLevel(e.target.value)}
                   required
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50"
-                >
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50">
+                  
                   <option value="">Выберите...</option>
                   <option value="beginner">Начинающий</option>
                   <option value="intermediate">Средний</option>
@@ -195,19 +195,19 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                     // Keep only up to 11 digits (7 + 10)
                     const d = digits.startsWith("7") ? digits.slice(0, 11) : digits.slice(0, 11);
                     let formatted = "";
-                    if (d.length === 0) { formatted = ""; }
-                    else if (d.length <= 1) { formatted = `+${d}`; }
-                    else if (d.length <= 4) { formatted = `+${d[0]} (${d.slice(1)}`; }
-                    else if (d.length <= 7) { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4)}`; }
-                    else if (d.length <= 9) { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7)}`; }
-                    else { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7, 9)}-${d.slice(9, 11)}`; }
+                    if (d.length === 0) {formatted = "";} else
+                    if (d.length <= 1) {formatted = `+${d}`;} else
+                    if (d.length <= 4) {formatted = `+${d[0]} (${d.slice(1)}`;} else
+                    if (d.length <= 7) {formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4)}`;} else
+                    if (d.length <= 9) {formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7)}`;} else
+                    {formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7, 9)}-${d.slice(9, 11)}`;}
                     setPhone(formatted);
                   }}
                   required
                   placeholder="+7 (___) ___-__-__"
                   maxLength={18}
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50"
-                />
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50" />
+                
               </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
@@ -216,14 +216,14 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                 <input
                   type="text"
                   value={promo}
-                  onChange={(e) => { setPromo(e.target.value); setPromoError(""); }}
+                  onChange={(e) => {setPromo(e.target.value);setPromoError("");}}
                   placeholder="Введите промокод"
                   maxLength={30}
-                  className={`w-full px-4 py-3 rounded-[16px] border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 ${promoError ? "border-destructive" : "border-border"}`}
-                />
-                {promoError && (
-                  <p className="text-destructive text-sm mt-1.5 font-body">{promoError}</p>
-                )}
+                  className={`w-full px-4 py-3 rounded-[16px] border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 ${promoError ? "border-destructive" : "border-border"}`} />
+                
+                {promoError &&
+                <p className="text-destructive text-sm mt-1.5 font-body">{promoError}</p>
+                }
               </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
@@ -235,14 +235,14 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                   rows={4}
                   maxLength={1000}
                   placeholder="Что вы хотите добавить?"
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none"
-                />
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none" />
+                
               </div>
               <button
                 type="submit"
                 disabled={sending}
-                className="w-full px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+                className="w-full px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
+                
                 {sending ? "Отправляем..." : "Отправить"}
               </button>
               <p className="text-xs text-muted-foreground text-center">
@@ -255,17 +255,17 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 /* ─── Location Card ─── */
-const LocationsSection = () => (
-  <section className="py-16 md:py-24">
+const LocationsSection = () =>
+<section className="py-16 md:py-24">
     <div className="max-w-[84rem] mx-auto px-6">
-      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">
-        Где нас мы
-      </h2>
+      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">Где нас нет
+
+    </h2>
       <p className="text-center text-muted-foreground font-body text-lg mb-12">
         Мы принимаем клиентов в нашей студии в Москве. Приходите на пробный урок в удобное для вас время!
       </p>
@@ -287,32 +287,32 @@ const LocationsSection = () => (
             </div>
           </div>
           <a
-            href="https://yandex.ru/maps/?whatshere[point]=37.472983,55.779459&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%BD%D1%91%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8%2C%207%D0%BA1"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold hover:bg-primary/90 transition-all duration-300"
-          >
+          href="https://yandex.ru/maps/?whatshere[point]=37.472983,55.779459&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%BD%D1%91%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8%2C%207%D0%BA1"
+          target="_blank"
+          rel="noreferrer noopener"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold hover:bg-primary/90 transition-all duration-300">
+          
             <MapPin size={20} />
             Открыть маршрут
           </a>
         </article>
       </div>
     </div>
-  </section>
-);
+  </section>;
+
 
 /* ─── Social CTA ─── */
 const SocialCTA = () => {
   const socials = [
-    { name: "Telegram", icon: <Send size={32} />, href: "https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20Zoon" },
-    { name: "Вконтакте", icon: <span className="text-2xl font-heading font-bold">ВК</span>, href: "https://vk.com/studiozv" },
-  ];
+  { name: "Telegram", icon: <Send size={32} />, href: "https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20Zoon" },
+  { name: "Вконтакте", icon: <span className="text-2xl font-heading font-bold">ВК</span>, href: "https://vk.com/studiozv" }];
+
 
   const badges = [
-    { value: "1200+", label: "Подписчиков" },
-    { value: "100+", label: "Публикаций" },
-    { value: "20+", label: "Событий в год" },
-  ];
+  { value: "1200+", label: "Подписчиков" },
+  { value: "100+", label: "Публикаций" },
+  { value: "20+", label: "Событий в год" }];
+
 
   return (
     <section className="py-16 md:py-24 bg-muted/30">
@@ -327,32 +327,32 @@ const SocialCTA = () => {
               Следите за новостями, анонсами событий и творческими достижениями наших учеников в социальных сетях
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-10">
-              {socials.map((s) => (
-                <a
-                  key={s.name}
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="flex items-center gap-3 px-6 py-3 rounded-[16px] bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 transition-all duration-300 hover:-translate-y-0.5"
-                >
+              {socials.map((s) =>
+              <a
+                key={s.name}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="flex items-center gap-3 px-6 py-3 rounded-[16px] bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20 transition-all duration-300 hover:-translate-y-0.5">
+                
                   {s.icon}
                   <span className="font-heading font-semibold">{s.name}</span>
                 </a>
-              ))}
+              )}
             </div>
             <div className="flex flex-wrap justify-center gap-6">
-              {badges.map((b) => (
-                <div key={b.label} className="bg-primary-foreground/10 rounded-[16px] px-6 py-4 min-w-[140px]">
+              {badges.map((b) =>
+              <div key={b.label} className="bg-primary-foreground/10 rounded-[16px] px-6 py-4 min-w-[140px]">
                   <p className="font-heading text-2xl font-bold text-primary-foreground">{b.value}</p>
                   <p className="font-body text-sm text-primary-foreground/70">{b.label}</p>
                 </div>
-              ))}
+              )}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export { ContactHero, QuickContact, FeedbackForm, LocationsSection, SocialCTA };
