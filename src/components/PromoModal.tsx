@@ -66,7 +66,7 @@ const PromoModal = () => {
 
           <div>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Первое занятие за 700&nbsp;₽
+              Первое занятие за <span className="line-through text-muted-foreground">1000&nbsp;₽</span> 700&nbsp;₽
             </h2>
             <p className="font-body text-muted-foreground leading-relaxed">
               Назовите промокод при записи и&nbsp;получите скидку на&nbsp;первое занятие в&nbsp;нашей студии
