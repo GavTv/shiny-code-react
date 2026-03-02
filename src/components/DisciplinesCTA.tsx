@@ -71,7 +71,7 @@ const ContactInfoSection = () => {
             <p className="font-body text-muted-foreground mb-8">
               Следите за нашими событиями, мастер-классами и успехами учеников в социальных сетях
             </p>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="flex flex-wrap gap-4">
               {socials.map((s) => (
                 <a
                   key={s.name}
