@@ -149,10 +149,22 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                 <input
                   type="tel"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={(e) => {
+                    const digits = e.target.value.replace(/\D/g, "");
+                    // Keep only up to 11 digits (7 + 10)
+                    const d = digits.startsWith("7") ? digits.slice(0, 11) : digits.slice(0, 11);
+                    let formatted = "";
+                    if (d.length === 0) { formatted = ""; }
+                    else if (d.length <= 1) { formatted = `+${d}`; }
+                    else if (d.length <= 4) { formatted = `+${d[0]} (${d.slice(1)}`; }
+                    else if (d.length <= 7) { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4)}`; }
+                    else if (d.length <= 9) { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7)}`; }
+                    else { formatted = `+${d[0]} (${d.slice(1, 4)}) ${d.slice(4, 7)}-${d.slice(7, 9)}-${d.slice(9, 11)}`; }
+                    setPhone(formatted);
+                  }}
                   required
                   placeholder="+7 (___) ___-__-__"
-                  maxLength={20}
+                  maxLength={18}
                   className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50"
                 />
               </div>
