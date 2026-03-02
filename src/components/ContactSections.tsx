@@ -2,6 +2,21 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Music } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import vocalImg from "@/assets/disciplines/vocal.webp";
+import guitarImg from "@/assets/disciplines/guitar.webp";
+import pianoImg from "@/assets/disciplines/piano.webp";
+import ukuleleImg from "@/assets/disciplines/ukulele.jpg";
+import songwritingImg from "@/assets/disciplines/songwriting.jpg";
+import ensembleImg from "@/assets/disciplines/ensemble.webp";
+
+const disciplineImages: Record<string, string> = {
+  guitar: guitarImg,
+  vocal: vocalImg,
+  piano: pianoImg,
+  ukulele: ukuleleImg,
+  songwriting: songwritingImg,
+  ensemble: ensembleImg,
+};
 
 /* ─── Hero ─── */
 const ContactHero = () => (
@@ -107,12 +122,22 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
           {/* Image placeholder */}
           <div className="relative rounded-[24px] overflow-hidden min-h-[400px]">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                <Music size={48} className="text-primary/60" />
-              </div>
-            </div>
+            {discipline && disciplineImages[discipline] ? (
+              <img
+                src={disciplineImages[discipline]}
+                alt={discipline}
+                className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500"
+              />
+            ) : (
+              <>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Music size={48} className="text-primary/60" />
+                  </div>
+                </div>
+              </>
+            )}
           </div>
           {/* Form */}
           <div className="bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
