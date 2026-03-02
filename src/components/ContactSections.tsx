@@ -82,8 +82,9 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
 
       if (error) throw error;
 
-      toast.success("Заявка отправлена!", {
-        description: "Мы скоро свяжемся с вами для подтверждения записи.",
+      toast("Мы скоро с вами свяжемся! 🎶", {
+        description: "Ваша заявка получена, ожидайте звонка.",
+        duration: 5000,
       });
       setDiscipline("");
       setLevel("");
