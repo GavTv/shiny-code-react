@@ -59,9 +59,19 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
   const [level, setLevel] = useState("");
   const [phone, setPhone] = useState("");
   const [comments, setComments] = useState("");
+  const [promo, setPromo] = useState("");
+  const [promoError, setPromoError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Validate promo: empty is OK, only "lovesound" is valid
+    const trimmedPromo = promo.trim().toLowerCase();
+    if (trimmedPromo && trimmedPromo !== "lovesound") {
+      setPromoError("Такого промокода не существует");
+      return;
+    }
+    setPromoError("");
+
     const disciplineLabels: Record<string, string> = {
       guitar: "Гитара", vocal: "Вокал", piano: "Фортепиано",
       ukulele: "Укулеле", songwriting: "Написание песен", ensemble: "Ансамбль",
@@ -69,9 +79,10 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
     const levelLabels: Record<string, string> = {
       beginner: "Начинающий", intermediate: "Средний", advanced: "Продвинутый",
     };
-    const text = `Запись на занятие\nДисциплина: ${disciplineLabels[discipline] || discipline}\nУровень: ${levelLabels[level] || level}\nТелефон: ${phone}\n${comments ? `Комментарий: ${comments}` : ""}`;
-    const mailto = `mailto:soundaround.club@yandex.ru?subject=${encodeURIComponent("Запись на занятие")}&body=${encodeURIComponent(text)}`;
-    window.open(mailto);
+    const promoLine = trimmedPromo === "lovesound" ? `\nПромокод: lovesound ✅` : "";
+    const text = `Запись на занятие\nДисциплина: ${disciplineLabels[discipline] || discipline}\nУровень: ${levelLabels[level] || level}\nТелефон: ${phone}${promoLine}${comments ? `\nКомментарий: ${comments}` : ""}`;
+    const tgUrl = `https://t.me/zv_musicstudio?text=${encodeURIComponent(text)}`;
+    window.open(tgUrl, "_blank");
   };
 
   return (
@@ -144,6 +155,22 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
                   maxLength={20}
                   className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50"
                 />
+              </div>
+              <div>
+                <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
+                  Промокод <span className="font-normal text-muted-foreground">(необязательно)</span>
+                </label>
+                <input
+                  type="text"
+                  value={promo}
+                  onChange={(e) => { setPromo(e.target.value); setPromoError(""); }}
+                  placeholder="Введите промокод"
+                  maxLength={30}
+                  className={`w-full px-4 py-3 rounded-[16px] border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 ${promoError ? "border-destructive" : "border-border"}`}
+                />
+                {promoError && (
+                  <p className="text-destructive text-sm mt-1.5 font-body">{promoError}</p>
+                )}
               </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
