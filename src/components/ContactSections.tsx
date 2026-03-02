@@ -264,7 +264,7 @@ const LocationsSection = () => (
   <section className="py-16 md:py-24">
     <div className="max-w-[84rem] mx-auto px-6">
       <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">
-        Где нас найти
+        Где нас мы
       </h2>
       <p className="text-center text-muted-foreground font-body text-lg mb-12">
         Мы принимаем клиентов в нашей студии в Москве. Приходите на пробный урок в удобное для вас время!
