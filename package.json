@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build -- --base=/shiny-code-react/",
     "deploy": "gh-pages -d dist"
   },
   "homepage": "https://gavtv.github.io/shiny-code-react",

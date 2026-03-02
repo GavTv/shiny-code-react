@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Disciplines from "./pages/Disciplines";
@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
 
 const queryClient = new QueryClient();
+const Router = import.meta.env.BASE_URL === "/" ? BrowserRouter : HashRouter;
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -19,7 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <PromoModal />
-      <BrowserRouter>
+      <Router>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -28,7 +29,7 @@ const App = () => (
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );
