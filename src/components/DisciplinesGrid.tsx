@@ -70,7 +70,7 @@ const DisciplinesGrid = () => {
                 <img
                   src={d.image}
                   alt={d.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
             </div>
