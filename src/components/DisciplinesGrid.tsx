@@ -1,10 +1,10 @@
 import { Mic, Guitar, Music, Headphones } from "lucide-react";
 import vocalImg from "@/assets/disciplines/vocal.webp";
-import guitarImg from "@/assets/disciplines/guitar-new.jpg";
-import pianoImg from "@/assets/disciplines/piano-new.jpg";
-import ukuleleImg from "@/assets/disciplines/ukulele-new.jpg";
-import songwritingImg from "@/assets/disciplines/songwriting-new.jpg";
-import ensembleImg from "@/assets/disciplines/ensemble-new.jpg";
+import guitarImg from "@/assets/disciplines/guitar.webp";
+import pianoImg from "@/assets/disciplines/piano.webp";
+import ukuleleImg from "@/assets/disciplines/ukulele.jpg";
+import songwritingImg from "@/assets/disciplines/songwriting.jpg";
+import ensembleImg from "@/assets/disciplines/ensemble.webp";
 
 const disciplines = [
   {
