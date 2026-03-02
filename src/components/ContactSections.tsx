@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Music } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 
 /* ─── Hero ─── */
 const ContactHero = () => (
@@ -61,28 +63,41 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
   const [comments, setComments] = useState("");
   const [promo, setPromo] = useState("");
   const [promoError, setPromoError] = useState("");
+  const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Validate promo: empty is OK, only "lovesound" is valid
     const trimmedPromo = promo.trim().toLowerCase();
     if (trimmedPromo && trimmedPromo !== "lovesound") {
       setPromoError("Такого промокода не существует");
       return;
     }
     setPromoError("");
+    setSending(true);
 
-    const disciplineLabels: Record<string, string> = {
-      guitar: "Гитара", vocal: "Вокал", piano: "Фортепиано",
-      ukulele: "Укулеле", songwriting: "Написание песен", ensemble: "Ансамбль",
-    };
-    const levelLabels: Record<string, string> = {
-      beginner: "Начинающий", intermediate: "Средний", advanced: "Продвинутый",
-    };
-    const promoLine = trimmedPromo === "lovesound" ? `\nПромокод: lovesound ✅` : "";
-    const text = `Запись на занятие\nДисциплина: ${disciplineLabels[discipline] || discipline}\nУровень: ${levelLabels[level] || level}\nТелефон: ${phone}${promoLine}${comments ? `\nКомментарий: ${comments}` : ""}`;
-    const tgUrl = `https://t.me/zv_musicstudio?text=${encodeURIComponent(text)}`;
-    window.open(tgUrl, "_blank");
+    try {
+      const { data, error } = await supabase.functions.invoke("send-to-telegram", {
+        body: { discipline, level, phone, promo: trimmedPromo, comments },
+      });
+
+      if (error) throw error;
+
+      toast.success("Заявка отправлена!", {
+        description: "Мы скоро свяжемся с вами для подтверждения записи.",
+      });
+      setDiscipline("");
+      setLevel("");
+      setPhone("");
+      setComments("");
+      setPromo("");
+    } catch (err) {
+      console.error(err);
+      toast.error("Не удалось отправить заявку", {
+        description: "Попробуйте позже или свяжитесь с нами по телефону.",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -199,9 +214,10 @@ const FeedbackForm = ({ onPrivacyOpen }: { onPrivacyOpen: () => void }) => {
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg"
+                disabled={sending}
+                className="w-full px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Отправить
+                {sending ? "Отправляем..." : "Отправить"}
               </button>
               <p className="text-xs text-muted-foreground text-center">
                 Нажимая кнопку «Отправить», вы даёте согласие на обработку ваших персональных данных в соответствии с{" "}
