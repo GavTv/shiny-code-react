@@ -8,6 +8,7 @@ import formPianoImg from "@/assets/form/piano.jpg";
 import formUkuleleImg from "@/assets/form/ukulele.jpg";
 import formSongwritingImg from "@/assets/form/songwriting.jpg";
 import formEnsembleImg from "@/assets/form/ensemble.jpg";
+import formDefaultImg from "@/assets/form/default.jpg";
 
 const disciplineImages: Record<string, string> = {
   guitar: formGuitarImg,
@@ -129,14 +130,10 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
               className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" /> :
 
 
-            <>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/30" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                    <Music size={48} className="text-primary/60" />
-                  </div>
-                </div>
-              </>
+            <img
+              src={formDefaultImg}
+              alt="Звук Вокруг"
+              className="absolute inset-0 w-full h-full object-contain bg-background p-8" />
             }
           </div>
           {/* Form */}
