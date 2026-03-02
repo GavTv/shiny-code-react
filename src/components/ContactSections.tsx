@@ -263,7 +263,7 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
 const LocationsSection = () =>
 <section className="py-16 md:py-24">
     <div className="max-w-[84rem] mx-auto px-6">
-      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">Где нас нет
+      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">Где нас найти
 
     </h2>
       <p className="text-center text-muted-foreground font-body text-lg mb-12">
