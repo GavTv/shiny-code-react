@@ -9,6 +9,7 @@ import Disciplines from "./pages/Disciplines";
 import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import PromoModal from "./components/PromoModal";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <PromoModal />
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
