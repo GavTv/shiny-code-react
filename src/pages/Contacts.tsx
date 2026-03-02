@@ -9,10 +9,9 @@ const Contacts = () => {
   return (
     <div className="w-full min-h-screen">
       <Navigation />
-      <ContactHero />
-      <QuickContact />
       <FeedbackForm onPrivacyOpen={() => setPrivacyOpen(true)} />
       <LocationsSection />
+      <QuickContact />
       
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
