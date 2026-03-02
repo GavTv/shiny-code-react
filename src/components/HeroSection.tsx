@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ctaPerson from "@/assets/cta-person.jpg";
+import ctaPerson from "@/assets/cta-person.webp";
 
 const HeroSection = () => {
   return (
