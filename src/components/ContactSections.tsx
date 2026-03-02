@@ -92,13 +92,18 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
     setSending(true);
 
     try {
-      const { data, error } = await supabase.functions.invoke("send-to-telegram", {
+      const response = await supabase.functions.invoke("send-to-telegram", {
         body: { discipline, level, phone, promo: trimmedPromo, comments }
       });
 
-      if (error) throw error;
+      console.log("Telegram response:", response);
 
-      toast("Мы скоро с вами свяжемся! 🎶", {
+      // Check for real errors (network failures, non-2xx status)
+      if (response.error && !response.data) {
+        throw response.error;
+      }
+
+      toast.success("Мы скоро с вами свяжемся! 🎶", {
         description: "Ваша заявка получена, ожидайте звонка.",
         duration: 5000
       });
@@ -108,7 +113,7 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
       setComments("");
       setPromo("");
     } catch (err) {
-      console.error(err);
+      console.error("Form submission error:", err);
       toast.error("Не удалось отправить заявку", {
         description: "Попробуйте позже или свяжитесь с нами по телефону."
       });
