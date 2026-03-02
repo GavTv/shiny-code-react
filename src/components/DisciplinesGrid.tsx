@@ -66,7 +66,7 @@ const DisciplinesGrid = () => {
                   {d.description}
                 </p>
               </div>
-              <div className="w-full h-[260px] overflow-hidden">
+              <div className="w-full h-[260px] overflow-hidden mt-auto">
                 <img
                   src={d.image}
                   alt={d.title}
