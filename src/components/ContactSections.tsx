@@ -262,7 +262,7 @@ const LocationsSection = () => (
             </div>
           </div>
           <a
-            href="https://yandex.ru/maps/?rtext=~55.779459,37.472983"
+            href="https://yandex.ru/maps/?whatshere[point]=37.472983,55.779459&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%BD%D1%91%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8%2C%207%D0%BA1"
             target="_blank"
             rel="noreferrer noopener"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold hover:bg-primary/90 transition-all duration-300"
