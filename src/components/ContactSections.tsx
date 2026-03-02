@@ -133,7 +133,7 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
             <img
               src={formDefaultImg}
               alt="Звук Вокруг"
-              className="absolute inset-0 w-full h-full object-contain bg-background p-8" />
+              className="absolute inset-0 w-full h-full object-cover" />
             }
           </div>
           {/* Form */}
