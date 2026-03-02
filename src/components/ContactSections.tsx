@@ -2,20 +2,20 @@ import { useState } from "react";
 import { Phone, Mail, MapPin, Send, Music } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import vocalImg from "@/assets/disciplines/vocal.webp";
-import guitarImg from "@/assets/disciplines/guitar.webp";
-import pianoImg from "@/assets/disciplines/piano.webp";
-import ukuleleImg from "@/assets/disciplines/ukulele.jpg";
-import songwritingImg from "@/assets/disciplines/songwriting.jpg";
-import ensembleImg from "@/assets/disciplines/ensemble.webp";
+import formGuitarImg from "@/assets/form/guitar.jpg";
+import formVocalImg from "@/assets/form/vocal.jpg";
+import formPianoImg from "@/assets/form/piano.jpg";
+import formUkuleleImg from "@/assets/form/ukulele.jpg";
+import formSongwritingImg from "@/assets/form/songwriting.jpg";
+import formEnsembleImg from "@/assets/form/ensemble.jpg";
 
 const disciplineImages: Record<string, string> = {
-  guitar: guitarImg,
-  vocal: vocalImg,
-  piano: pianoImg,
-  ukulele: ukuleleImg,
-  songwriting: songwritingImg,
-  ensemble: ensembleImg,
+  guitar: formGuitarImg,
+  vocal: formVocalImg,
+  piano: formPianoImg,
+  ukulele: formUkuleleImg,
+  songwriting: formSongwritingImg,
+  ensemble: formEnsembleImg,
 };
 
 /* ─── Hero ─── */
