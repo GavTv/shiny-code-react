@@ -28,9 +28,8 @@ jobs:
 
       - run: npm run build
         env:
-          GITHUB_PAGES: 'true'
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_PUBLISHABLE_KEY }}
+          VITE_SUPABASE_URL: 'https://lanmmtaovazvsxvlclfr.supabase.co'
+          VITE_SUPABASE_PUBLISHABLE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxhbm1tdGFvdmF6dnN4dmxjbGZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzI0NTQ3NDUsImV4cCI6MjA4ODAzMDc0NX0.EaZnACevKhwQRuXkaQwNfiFmRs15TWm-cfI_rvAo448'
 
       - run: cp dist/index.html dist/404.html
 
