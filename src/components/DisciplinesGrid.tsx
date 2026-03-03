@@ -1,10 +1,12 @@
-import { Mic, Guitar, Music, Headphones } from "lucide-react";
+import { Mic, Guitar, Music, Headphones, Home, Radio } from "lucide-react";
 import vocalImg from "@/assets/disciplines/vocal.webp";
 import guitarImg from "@/assets/disciplines/guitar.webp";
 import pianoImg from "@/assets/disciplines/piano.webp";
 import ukuleleImg from "@/assets/disciplines/ukulele.jpg";
 import songwritingImg from "@/assets/disciplines/songwriting.jpg";
 import ensembleImg from "@/assets/disciplines/ensemble.webp";
+import rentalImg from "@/assets/disciplines/rental.webp";
+import recordingImg from "@/assets/disciplines/recording.webp";
 
 const disciplines = [
   {
@@ -42,6 +44,18 @@ const disciplines = [
     title: "Вокальный ансамбль",
     description: "Маленькие ансамбли и группы, которые отрабатывают песни и навыки живых выступлений.",
     image: ensembleImg,
+  },
+  {
+    icon: <Home size={48} />,
+    title: "Аренда помещения",
+    description: "У нас вы сможете арендовать почасово помещение для самостоятельной практики.",
+    image: rentalImg,
+  },
+  {
+    icon: <Radio size={48} />,
+    title: "Студия звукозаписи",
+    description: "Запиши свою песню со звукорежиссёром в профессиональной студии.",
+    image: recordingImg,
   },
 ];
 
