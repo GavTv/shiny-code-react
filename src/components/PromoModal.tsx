@@ -71,6 +71,9 @@ const PromoModal = () => {
             <p className="font-body text-muted-foreground leading-relaxed">
               Назовите промокод при записи и&nbsp;получите скидку на&nbsp;первое занятие в&nbsp;нашей студии
             </p>
+            <p className="font-body text-sm text-destructive font-semibold mt-2">
+              ⏳ Акция действует только до&nbsp;конца месяца!
+            </p>
           </div>
 
           {/* Promo code block */}
