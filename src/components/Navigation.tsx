@@ -6,7 +6,7 @@ import logo from "@/assets/logo.png";
 const navLinks = [
   { label: "Главная", to: "/" },
   { label: "О нас", to: "/about" },
-  { label: "Дисциплины", to: "/disciplines" },
+  { label: "Услуги", to: "/disciplines" },
   { label: "Контакты", to: "/contacts" },
 ];
 
