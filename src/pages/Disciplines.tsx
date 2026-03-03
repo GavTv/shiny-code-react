@@ -6,11 +6,17 @@ import PricingSection from "@/components/PricingSection";
 import { DisciplinesCTA, ContactInfoSection } from "@/components/DisciplinesCTA";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
+import SEO from "@/components/SEO";
 
 const Disciplines = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
   return (
     <div className="w-full min-h-screen">
+      <SEO
+        title="Дисциплины и цены"
+        description="Вокал, гитара, фортепиано, укулеле, ансамбль и сонграйтинг — все музыкальные направления студии «Звук Вокруг». Цены от 1000 руб. за занятие."
+        path="/disciplines"
+      />
       <Navigation />
       <DisciplinesHero />
       <DisciplinesGrid />
