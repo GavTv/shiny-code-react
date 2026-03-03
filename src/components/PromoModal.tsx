@@ -58,30 +58,31 @@ const PromoModal = () => {
           <X size={18} />
         </button>
 
-        <div className="p-8 pt-6 flex flex-col items-center text-center gap-5">
+        <div className="p-4 pt-3 md:p-8 md:pt-6 flex flex-col items-center text-center gap-3 md:gap-5">
           {/* Icon */}
-          <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-            <Music size={32} />
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+            <Music size={22} className="md:hidden" />
+            <Music size={32} className="hidden md:block" />
           </div>
 
           <div>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
+            <h2 className="font-heading text-lg md:text-3xl font-bold text-foreground mb-1 md:mb-2">
               Первое занятие за <span className="line-through text-muted-foreground">1000&nbsp;₽</span> 700&nbsp;₽
             </h2>
-            <p className="font-body text-muted-foreground leading-relaxed">
+            <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
               Назовите промокод при записи и&nbsp;получите скидку на&nbsp;первое занятие в&nbsp;нашей студии
             </p>
-            <p className="font-body text-sm text-destructive font-semibold mt-2">
+            <p className="font-body text-xs md:text-sm text-destructive font-semibold mt-1.5 md:mt-2">
               ⏳ Акция действует только до&nbsp;конца месяца!
             </p>
           </div>
 
           {/* Promo code block */}
-          <div className="w-full rounded-2xl bg-muted/50 border border-border p-5">
-            <span className="text-xs font-heading text-muted-foreground uppercase tracking-widest block mb-2">
+          <div className="w-full rounded-xl md:rounded-2xl bg-muted/50 border border-border p-3 md:p-5">
+            <span className="text-[10px] md:text-xs font-heading text-muted-foreground uppercase tracking-widest block mb-1 md:mb-2">
               Ваш промокод
             </span>
-            <span className="font-heading text-3xl font-bold text-primary tracking-wider">
+            <span className="font-heading text-2xl md:text-3xl font-bold text-primary tracking-wider">
               {PROMO_CODE}
             </span>
           </div>
@@ -89,9 +90,9 @@ const PromoModal = () => {
           {/* Copy button */}
           <button
             onClick={handleCopy}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
           >
-            {copied ? <Check size={20} /> : <Copy size={20} />}
+            {copied ? <Check size={18} /> : <Copy size={18} />}
             {copied ? "Скопировано!" : "Скопировать промокод"}
           </button>
 

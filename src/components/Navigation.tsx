@@ -37,10 +37,10 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 w-full z-[1000] bg-background border-b border-border">
-      <div className="max-w-[84rem] mx-auto flex items-center justify-between px-6 py-3 gap-4">
+      <div className="max-w-[84rem] mx-auto flex items-center justify-between px-4 py-1.5 md:px-6 md:py-3 gap-4">
         {/* Logo */}
         <Link to="/" className="flex-shrink-0 transition-transform hover:-translate-y-0.5">
-          <img src={logo} alt="Звук Вокруг" className="h-28 w-auto" />
+          <img src={logo} alt="Звук Вокруг" className="h-16 md:h-28 w-auto" />
         </Link>
 
         {/* Desktop nav - centered links */}
