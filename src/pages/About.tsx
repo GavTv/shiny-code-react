@@ -6,11 +6,17 @@ import PedagogySection from "@/components/PedagogySection";
 import AboutGallery from "@/components/AboutGallery";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
+import SEO from "@/components/SEO";
 
 const About = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
   return (
     <div className="w-full min-h-screen">
+      <SEO
+        title="О нас"
+        description="Команда студии «Звук Вокруг» — опытные преподаватели вокала, гитары и фортепиано в Москве. Узнайте о нашей методике и педагогах."
+        path="/about"
+      />
       <Navigation />
       <FounderHero />
       <TeachersSection />
