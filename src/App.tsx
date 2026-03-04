@@ -9,6 +9,9 @@ import About from "./pages/About";
 import Disciplines from "./pages/Disciplines";
 import Contacts from "./pages/Contacts";
 import Mnevniki from "./pages/Mnevniki";
+import Blog from "./pages/Blog";
+import BlogVokalCoach from "./pages/BlogVokalCoach";
+import BlogGitaraNovichki from "./pages/BlogGitaraNovichki";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
@@ -33,6 +36,9 @@ const App = () => (
             <Route path="/disciplines" element={<Disciplines />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/mnevniki" element={<Mnevniki />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/vokal-koach-moskva" element={<BlogVokalCoach />} />
+            <Route path="/blog/gitara-nachinayushim-oshibki" element={<BlogGitaraNovichki />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
