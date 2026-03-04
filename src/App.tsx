@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Disciplines from "./pages/Disciplines";
 import Contacts from "./pages/Contacts";
+import Mnevniki from "./pages/Mnevniki";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/disciplines" element={<Disciplines />} />
             <Route path="/contacts" element={<Contacts />} />
+            <Route path="/mnevniki" element={<Mnevniki />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
