@@ -73,10 +73,8 @@ const QuickContact = () =>
 
 /* ─── Feedback Form ─── */
 const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
-  const [discipline, setDiscipline] = useState("");
-  const [level, setLevel] = useState("");
+const [discipline, setDiscipline] = useState("");
   const [phone, setPhone] = useState("");
-  const [comments, setComments] = useState("");
   const [promo, setPromo] = useState("");
   const [promoError, setPromoError] = useState("");
   const [sending, setSending] = useState(false);
@@ -93,7 +91,7 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
 
     try {
       const response = await supabase.functions.invoke("send-to-telegram", {
-        body: { discipline, level, phone, promo: trimmedPromo, comments }
+        body: { discipline, phone, promo: trimmedPromo }
       });
 
       console.log("Telegram response:", response);
@@ -108,9 +106,7 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
         duration: 5000
       });
       setDiscipline("");
-      setLevel("");
       setPhone("");
-      setComments("");
       setPromo("");
     } catch (err) {
       console.error("Form submission error:", err);
@@ -171,22 +167,6 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
               </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
-                  Уровень мастерства
-                </label>
-                <select
-                  value={level}
-                  onChange={(e) => setLevel(e.target.value)}
-                  required
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50">
-                  
-                  <option value="">Выберите...</option>
-                  <option value="beginner">Начинающий</option>
-                  <option value="intermediate">Средний</option>
-                  <option value="advanced">Продвинутый</option>
-                </select>
-              </div>
-              <div>
-                <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
                   Телефон
                 </label>
                 <input
@@ -226,19 +206,6 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
                 {promoError &&
                 <p className="text-destructive text-sm mt-1.5 font-body">{promoError}</p>
                 }
-              </div>
-              <div>
-                <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
-                  Комментарии
-                </label>
-                <textarea
-                  value={comments}
-                  onChange={(e) => setComments(e.target.value)}
-                  rows={4}
-                  maxLength={1000}
-                  placeholder="Что вы хотите добавить?"
-                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none" />
-                
               </div>
               <button
                 type="submit"
