@@ -4,7 +4,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "MusicSchool",
   name: "Звук Вокруг",
-  alternateName: "Sound Around",
+  alternateName: "Звук Вокруг школа вокала",
   url: "https://zvschool.ru",
   telephone: "+7-916-235-33-81",
   email: "soundaround.club@yandex.ru",
