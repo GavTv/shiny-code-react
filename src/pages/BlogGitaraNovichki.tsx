@@ -91,7 +91,7 @@ const BlogGitaraNovichki = () => {
           </h1>
           <div className="flex items-center gap-4 text-muted-foreground text-sm">
             <span className="flex items-center gap-1.5"><Calendar size={14} /> 3 марта 2026</span>
-            <span className="flex items-center gap-1.5"><Clock size={14} /> 7 мин чтения</span>
+            <span className="flex items-center gap-1.5"><Clock size={14} /> 2 мин чтения</span>
           </div>
         </div>
       </section>
@@ -150,7 +150,7 @@ const BlogGitaraNovichki = () => {
               Все пять ошибок объединяет одно — они <strong>закрепляются</strong>, если учиться самостоятельно. Преподаватель видит их сразу и не даёт сформироваться вредным привычкам. Именно поэтому один месяц с педагогом заменяет полгода самоучки.
             </p>
             <p className="text-foreground leading-relaxed mt-4">
-              В <strong>Звук Вокруг</strong> пробный урок гитары стоит <strong>700 руб (45 минут)</strong>. За это время преподаватель оценит ваш текущий уровень, покажет правильную технику и составит план обучения.
+              В <strong>Звук Вокруг</strong> пробный урок гитары стоит <strong>1000 руб (45 минут)</strong>. За это время преподаватель оценит ваш текущий уровень, покажет правильную технику и составит план обучения.
             </p>
           </div>
         </div>
