@@ -1,29 +1,42 @@
 import { useState, useEffect } from "react";
-import { X, Copy, Check, Music } from "lucide-react";
+import { X, Copy, Check, ExternalLink } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const PROMO_CODE = "lovesound";
-const STORAGE_KEY = "promo_modal_shown";
+const PROMO_CODE = "MUSIC500";
+const STORAGE_KEY = "partner_promo_shown";
+const PARTNER_URL =
+  "https://novobeauty.ru/?promo=music500&utm_source=zvschool";
 
-interface PromoModalProps {
-  onDismiss?: () => void;
+interface PartnerPromoModalProps {
+  /** Signal that the first promo (lovesound) has been dismissed */
+  trigger: boolean;
 }
 
-const PromoModal = ({ onDismiss }: PromoModalProps) => {
+const PartnerPromoModal = ({ trigger }: PartnerPromoModalProps) => {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
-    if (sessionStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setOpen(true), 1200);
+    if (!trigger) return;
+
+    // Already shown this visitor
+    if (localStorage.getItem(STORAGE_KEY)) return;
+
+    // Came from novobeauty — skip
+    try {
+      if (document.referrer && new URL(document.referrer).hostname.includes("novobeauty")) return;
+    } catch {
+      /* ignore bad referrer */
+    }
+
+    const timer = setTimeout(() => setOpen(true), 600);
     return () => clearTimeout(timer);
-  }, []);
+  }, [trigger]);
 
   const handleClose = () => {
     setOpen(false);
-    sessionStorage.setItem(STORAGE_KEY, "1");
-    onDismiss?.();
+    localStorage.setItem(STORAGE_KEY, "1");
   };
 
   const handleCopy = async () => {
@@ -38,6 +51,13 @@ const PromoModal = ({ onDismiss }: PromoModalProps) => {
   };
 
   if (!open) return null;
+
+  const services = [
+    "Архитектура бровей",
+    "Чистка лица (ультразвук)",
+    "Абсолютное счастье для волос",
+    "Маникюр-Педикюр (комплекс)",
+  ];
 
   return (
     <div
@@ -65,22 +85,30 @@ const PromoModal = ({ onDismiss }: PromoModalProps) => {
 
         <div className="p-4 pt-3 md:p-8 md:pt-6 flex flex-col items-center text-center gap-3 md:gap-5">
           {/* Icon */}
-          <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-            <Music size={22} className="md:hidden" />
-            <Music size={32} className="hidden md:block" />
+          <div className="w-10 h-10 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
+            <span className="text-lg md:text-3xl" role="img" aria-label="music and beauty">
+              🎵💄
+            </span>
           </div>
 
           <div>
             <h2 className="font-heading text-lg md:text-3xl font-bold text-foreground mb-1 md:mb-2">
-              Первое занятие за <span className="line-through text-muted-foreground">1000&nbsp;₽</span> 700&nbsp;₽
+              Готов к сцене?
             </h2>
             <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
-              Назовите промокод при записи и&nbsp;получите скидку на&nbsp;первое занятие в&nbsp;нашей студии
-            </p>
-            <p className="font-body text-xs md:text-sm text-destructive font-semibold mt-1.5 md:mt-2">
-              ⏳ Акция действует только до&nbsp;конца месяца!
+              Записался в&nbsp;Звук&nbsp;Вокруг? Получи скидку <span className="font-bold text-primary">500&nbsp;₽</span> в&nbsp;NovoBeauty на:
             </p>
           </div>
+
+          {/* Services list */}
+          <ul className="w-full text-left space-y-1.5 md:space-y-2 px-2 md:px-4">
+            {services.map((s) => (
+              <li key={s} className="flex items-start gap-2 text-sm md:text-base text-foreground font-body">
+                <span className="text-primary mt-0.5">✦</span>
+                {s}
+              </li>
+            ))}
+          </ul>
 
           {/* Promo code block */}
           <div className="w-full rounded-xl md:rounded-2xl bg-muted/50 border border-border p-3 md:p-5">
@@ -95,11 +123,23 @@ const PromoModal = ({ onDismiss }: PromoModalProps) => {
           {/* Copy button */}
           <button
             onClick={handleCopy}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 md:px-6 md:py-3 rounded-xl md:rounded-2xl bg-muted text-foreground font-heading font-bold text-sm md:text-base transition-all duration-200 hover:bg-muted/80 active:scale-[0.98]"
           >
-            {copied ? <Check size={18} /> : <Copy size={18} />}
+            {copied ? <Check size={16} /> : <Copy size={16} />}
             {copied ? "Скопировано!" : "Скопировать промокод"}
           </button>
+
+          {/* CTA button */}
+          <a
+            href={PARTNER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => localStorage.setItem(STORAGE_KEY, "1")}
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
+          >
+            <ExternalLink size={18} />
+            Перейти в салон
+          </a>
 
           <button
             onClick={handleClose}
@@ -113,4 +153,4 @@ const PromoModal = ({ onDismiss }: PromoModalProps) => {
   );
 };
 
-export default PromoModal;
+export default PartnerPromoModal;
