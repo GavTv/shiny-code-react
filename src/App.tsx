@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,23 +15,19 @@ import BlogGitaraNovichki from "./pages/BlogGitaraNovichki";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
-import PartnerPromoModal from "./components/PartnerPromoModal";
 import JsonLd from "./components/JsonLd";
 
 const queryClient = new QueryClient();
 const Router = import.meta.env.BASE_URL === "/" ? BrowserRouter : HashRouter;
 
 const App = () => {
-  const [showPartner, setShowPartner] = useState(false);
-
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <PromoModal onDismiss={() => setShowPartner(true)} />
-          <PartnerPromoModal trigger={showPartner} />
+          <PromoModal />
           <JsonLd />
           <Router>
             <ScrollToTop />
