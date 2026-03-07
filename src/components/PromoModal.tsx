@@ -5,7 +5,11 @@ import { useToast } from "@/hooks/use-toast";
 const PROMO_CODE = "lovesound";
 const STORAGE_KEY = "promo_modal_shown";
 
-const PromoModal = () => {
+interface PromoModalProps {
+  onDismiss?: () => void;
+}
+
+const PromoModal = ({ onDismiss }: PromoModalProps) => {
   const [open, setOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const { toast } = useToast();
@@ -19,6 +23,7 @@ const PromoModal = () => {
   const handleClose = () => {
     setOpen(false);
     sessionStorage.setItem(STORAGE_KEY, "1");
+    onDismiss?.();
   };
 
   const handleCopy = async () => {
