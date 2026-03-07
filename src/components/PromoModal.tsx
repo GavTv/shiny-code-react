@@ -14,7 +14,7 @@ const PromoModal = () => {
 
   useEffect(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setOpen(true), 1200);
+    const timer = setTimeout(() => setOpen(true), 3000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -66,12 +66,15 @@ const PromoModal = () => {
 
         <div className="p-4 pt-3 md:p-8 md:pt-6 flex flex-col items-center text-center gap-2.5 md:gap-4">
           <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
-            <span className="text-lg md:text-2xl" role="img" aria-label="bonuses">🎁</span>
+            <span className="text-lg md:text-2xl" role="img" aria-label="spring">🌷</span>
           </div>
 
           <h2 className="font-heading text-lg md:text-2xl font-bold text-foreground">
-            Записался? Два бонуса!
+            С 8 Марта! Два подарка 💐
           </h2>
+          <p className="text-sm text-muted-foreground font-body -mt-1">
+            Дарим бонусы к&nbsp;празднику&nbsp;весны
+          </p>
 
           {/* Bonus 1 */}
           <div className="w-full rounded-xl bg-muted/50 border border-border p-3 md:p-4 text-left">
