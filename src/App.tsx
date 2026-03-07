@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,36 +16,42 @@ import BlogGitaraNovichki from "./pages/BlogGitaraNovichki";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
+import PartnerPromoModal from "./components/PartnerPromoModal";
 import JsonLd from "./components/JsonLd";
 
 const queryClient = new QueryClient();
 const Router = import.meta.env.BASE_URL === "/" ? BrowserRouter : HashRouter;
 
-const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <PromoModal />
-        <JsonLd />
-        <Router>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/disciplines" element={<Disciplines />} />
-            <Route path="/contacts" element={<Contacts />} />
-            <Route path="/mnevniki" element={<Mnevniki />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/vokal-koach-moskva" element={<BlogVokalCoach />} />
-            <Route path="/blog/gitara-nachinayushim-oshibki" element={<BlogGitaraNovichki />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Router>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
-);
+const App = () => {
+  const [showPartner, setShowPartner] = useState(false);
+
+  return (
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <PromoModal onDismiss={() => setShowPartner(true)} />
+          <PartnerPromoModal trigger={showPartner} />
+          <JsonLd />
+          <Router>
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/disciplines" element={<Disciplines />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/mnevniki" element={<Mnevniki />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/vokal-koach-moskva" element={<BlogVokalCoach />} />
+              <Route path="/blog/gitara-nachinayushim-oshibki" element={<BlogGitaraNovichki />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Router>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  );
+};
 
 export default App;
