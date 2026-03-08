@@ -80,7 +80,7 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
         {/* Bottom */}
         <div className="flex flex-col items-center gap-1 border-t border-border/40 pt-3 md:pt-4">
           <p className="text-muted-foreground text-[10px] font-body">
-            © 2025 Студия Звук Вокруг. Все права защищены.
+            © 2026 Студия Звук Вокруг. Все права защищены.
           </p>
           <div className="flex items-center gap-1.5">
             <button
