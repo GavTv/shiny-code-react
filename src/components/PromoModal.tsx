@@ -129,7 +129,7 @@ const PromoModal = () => {
             className="w-full flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
           >
             <ExternalLink size={18} />
-            Перейти в салон
+            Перейти на сайт салона
           </a>
 
           <button
