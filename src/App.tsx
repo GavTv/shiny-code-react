@@ -28,7 +28,7 @@ const App = () => {
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <PromoModal />
+          
           <JsonLd />
           <Router>
             <ScrollToTop />
