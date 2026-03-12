@@ -78,10 +78,10 @@ const March8 = () => {
                 <span className="text-3xl">🎁</span>
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-3">
-                Бесплатный первый урок вокала
+                Первый урок вокала — всего 300&nbsp;₽
               </h2>
               <p className="text-muted-foreground font-body mb-6 flex-1">
-                Попробуй себя в роли певицы — приходи на бесплатное пробное занятие
+                Попробуй себя в роли певицы — приходи на пробное занятие <span className="font-bold text-primary">за 300&nbsp;₽</span> вместо <span className="line-through">1000&nbsp;₽</span>
                 в школу музыки{" "}
                 <a
                   href={SCHOOL_URL}
