@@ -116,10 +116,9 @@ const March8 = () => {
 
               <Link
                 to="/contacts"
-                className="mt-4 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]">Записаться на пробный урок
-
+                className="mt-4 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]">
                 <Music size={20} />
-                Записаться на бесплатный урок
+                Записаться на пробный урок
               </Link>
             </div>
           </div>
