@@ -15,7 +15,7 @@ import BlogGitaraNovichki from "./pages/BlogGitaraNovichki";
 import March8 from "./pages/March8";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
-import PromoModal from "./components/PromoModal";
+
 import JsonLd from "./components/JsonLd";
 
 const queryClient = new QueryClient();
