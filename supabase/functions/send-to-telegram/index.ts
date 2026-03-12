@@ -9,7 +9,7 @@ Deno.serve(async (req) => {
   }
 
   try {
-    const { discipline, level, phone, promo, comments } = await req.json();
+    const { discipline, phone, promo, comments } = await req.json();
 
     const botToken = Deno.env.get('TELEGRAM_BOT_TOKEN');
     const chatId = Deno.env.get('TELEGRAM_CHAT_ID');
@@ -25,14 +25,11 @@ Deno.serve(async (req) => {
       guitar: 'Гитара', vocal: 'Вокал', piano: 'Фортепиано',
       ukulele: 'Укулеле', songwriting: 'Написание песен', ensemble: 'Ансамбль',
     };
-    const levelLabels: Record<string, string> = {
-      beginner: 'Начинающий', intermediate: 'Средний', advanced: 'Продвинутый',
-    };
 
-    const promoLine = promo === 'lovesound' ? '\n✅ Промокод: lovesound' : '';
+    const promoLine = promo ? `\n✅ Промокод: ${promo}` : '';
     const commentsLine = comments ? `\n💬 Комментарий: ${comments}` : '';
 
-    const text = `📩 Новая заявка с сайта\n\n🎵 Дисциплина: ${disciplineLabels[discipline] || discipline}\n📊 Уровень: ${levelLabels[level] || level}\n📞 Телефон: ${phone}${promoLine}${commentsLine}`;
+    const text = `📩 Новая заявка с сайта\n\n🎵 Дисциплина: ${disciplineLabels[discipline] || discipline}\n📞 Телефон: ${phone}${promoLine}${commentsLine}`;
 
     const tgResponse = await fetch(
       `https://api.telegram.org/bot${botToken}/sendMessage`,
