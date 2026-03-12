@@ -12,6 +12,7 @@ import Mnevniki from "./pages/Mnevniki";
 import Blog from "./pages/Blog";
 import BlogVokalCoach from "./pages/BlogVokalCoach";
 import BlogGitaraNovichki from "./pages/BlogGitaraNovichki";
+import March8 from "./pages/March8";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import PromoModal from "./components/PromoModal";
@@ -40,6 +41,7 @@ const App = () => {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/vokal-koach-moskva" element={<BlogVokalCoach />} />
               <Route path="/blog/gitara-nachinayushim-oshibki" element={<BlogGitaraNovichki />} />
+              <Route path="/march8" element={<March8 />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Router>
