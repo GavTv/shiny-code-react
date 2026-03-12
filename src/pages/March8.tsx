@@ -111,18 +111,16 @@ const March8 = () => {
               </div>
 
               <p className="text-sm text-muted-foreground font-body">
-                Запишись по ссылке и назови код администратору
+                Скопируй промокод и назови его администратору при записи
               </p>
 
-              <a
-                href="https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20%D1%83%D1%80%D0%BE%D0%BA.%20%D0%9F%D1%80%D0%BE%D0%BC%D0%BE%D0%BA%D0%BE%D0%B4%20BEAUTYSOUND"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/contacts"
                 className="mt-4 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
               >
                 <Music size={20} />
                 Записаться на бесплатный урок
-              </a>
+              </Link>
             </div>
           </div>
 
