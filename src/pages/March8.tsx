@@ -12,11 +12,11 @@ const SCHOOL_URL = "https://zvschool.ru";
 const PARTNER_URL = "https://novobeauty.ru/?promo=music500&utm_source=zvschool";
 
 const beautyServices = [
-  { title: "Архитектура бровей", desc: "идеальная форма для весны" },
-  { title: "Чистка лица (ультразвук)", desc: "сияющая кожа без покраснений" },
-  { title: "Абсолютное счастье для волос", desc: "блеск и восстановление Lebel" },
-  { title: "Маникюр + педикюр (комплекс)", desc: "идеальный образ к теплу" },
-];
+{ title: "Архитектура бровей", desc: "идеальная форма для весны" },
+{ title: "Чистка лица (ультразвук)", desc: "сияющая кожа без покраснений" },
+{ title: "Абсолютное счастье для волос", desc: "блеск и восстановление Lebel" },
+{ title: "Маникюр + педикюр (комплекс)", desc: "идеальный образ к теплу" }];
+
 
 const March8 = () => {
   const [privacyOpen, setPrivacyOpen] = useState(false);
@@ -39,8 +39,8 @@ const March8 = () => {
       <SEO
         title="Акция 8 Марта — бесплатный урок вокала"
         description="Бесплатный первый урок вокала в школе Звук Вокруг + скидка 500 ₽ на бьюти-процедуры. Промокод BEAUTYSOUND до 31 марта!"
-        path="/march8"
-      />
+        path="/march8" />
+      
       <Navigation />
 
       {/* Hero */}
@@ -85,8 +85,8 @@ const March8 = () => {
                 в школу музыки{" "}
                 <a
                   href={SCHOOL_URL}
-                  className="text-primary font-semibold hover:underline"
-                >
+                  className="text-primary font-semibold hover:underline">
+                  
                   Звук Вокруг
                 </a>
                 . Раскрой свой талант вместе с красотой!
@@ -102,8 +102,8 @@ const March8 = () => {
                   </span>
                   <button
                     onClick={handleCopy}
-                    className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-semibold transition-all hover:bg-primary/20 active:scale-95"
-                  >
+                    className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary text-sm font-semibold transition-all hover:bg-primary/20 active:scale-95">
+                    
                     {copied ? <Check size={14} /> : <Copy size={14} />}
                     {copied ? "Скопировано" : "Копировать"}
                   </button>
@@ -116,8 +116,8 @@ const March8 = () => {
 
               <Link
                 to="/contacts"
-                className="mt-4 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
-              >
+                className="mt-4 flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]">Записаться на пробный урок
+
                 <Music size={20} />
                 Записаться на бесплатный урок
               </Link>
@@ -139,11 +139,11 @@ const March8 = () => {
               </p>
 
               <ul className="space-y-3 mb-6 flex-1">
-                {beautyServices.map((s) => (
-                  <li
-                    key={s.title}
-                    className="flex items-start gap-3 p-3 rounded-xl bg-muted/50 border border-border"
-                  >
+                {beautyServices.map((s) =>
+                <li
+                  key={s.title}
+                  className="flex items-start gap-3 p-3 rounded-xl bg-muted/50 border border-border">
+                  
                     <span className="text-primary mt-0.5">✦</span>
                     <div>
                       <span className="font-heading font-bold text-foreground text-sm">
@@ -155,15 +155,15 @@ const March8 = () => {
                       </span>
                     </div>
                   </li>
-                ))}
+                )}
               </ul>
 
               <a
                 href={PARTNER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-secondary text-secondary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
-              >
+                className="mt-auto flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-secondary text-secondary-foreground font-heading font-bold text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]">
+                
                 <ExternalLink size={20} />
                 Перейти на сайт салона
               </a>
@@ -191,8 +191,8 @@ const March8 = () => {
 
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
-    </div>
-  );
+    </div>);
+
 };
 
 export default March8;
