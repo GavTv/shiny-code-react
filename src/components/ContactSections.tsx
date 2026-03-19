@@ -252,7 +252,7 @@ const LocationsSection = () =>
             <p className="font-body text-muted-foreground text-sm">Москва, 123308</p>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="text-sm">🚇</span>
-              <span className="font-body text-sm">метро Народного Ополчения</span>
+              <span className="font-body text-sm">7 мин от метро Народного Ополчения</span>
             </div>
           </div>
           <a
