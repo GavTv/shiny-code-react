@@ -245,7 +245,7 @@ const LocationsSection = () =>
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
               <MapPin size={28} />
             </div>
-            <h3 className="font-heading text-xl font-bold text-foreground">Отделение 1</h3>
+            <h3 className="font-heading text-xl font-bold text-foreground">Наша студия</h3>
           </div>
           <div className="space-y-2 mb-6">
             <p className="font-body font-semibold text-foreground">улица Мнёвники, 7к1</p>
