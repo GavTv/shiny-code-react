@@ -140,7 +140,7 @@ const [discipline, setDiscipline] = useState("");
           {/* Form */}
           <div className="bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
-              Обратная связь
+              Запись на пробное занятие
             </h2>
             <p className="font-body text-muted-foreground mb-6">
               Заполните форму, и мы свяжемся с вами для подтверждения записи.
