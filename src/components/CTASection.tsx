@@ -23,12 +23,12 @@ const CTASection = () => {
 
         {/* Right actions */}
         <div className="flex flex-col items-end gap-4">
-          <a
-            href="tel:+79162353381"
+          <Link
+            to="/contacts"
             className="inline-flex items-center px-6 py-4 text-lg font-body font-semibold text-accent-foreground bg-accent rounded-2xl shadow-lg transition-all duration-200 hover:opacity-90"
           >
             Записаться сейчас
-          </a>
+          </Link>
           <div className="flex gap-3">
             {[
               { href: "tel:+79162353381", label: "Позвонить", icon: Phone },
