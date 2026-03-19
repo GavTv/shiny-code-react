@@ -212,7 +212,7 @@ const [discipline, setDiscipline] = useState("");
                 disabled={sending}
                 className="w-full px-8 py-4 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed">
                 
-                {sending ? "Отправляем..." : "Отправить"}
+                {sending ? "Отправляем..." : "Записаться"}
               </button>
               <p className="text-xs text-muted-foreground text-center">
                 Нажимая кнопку «Отправить», вы даёте согласие на обработку ваших персональных данных в соответствии с{" "}
