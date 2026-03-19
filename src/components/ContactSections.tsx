@@ -123,7 +123,7 @@ const [discipline, setDiscipline] = useState("");
       <div className="max-w-[84rem] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
           {/* Image placeholder */}
-          <div className="relative rounded-[24px] overflow-hidden min-h-[400px]">
+          <div className="relative rounded-[24px] overflow-hidden min-h-[400px] aspect-[3/4]">
             {discipline && disciplineImages[discipline] ?
             <img
               src={disciplineImages[discipline]}
