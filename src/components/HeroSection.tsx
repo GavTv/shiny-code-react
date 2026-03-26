@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ctaPerson from "@/assets/cta-person.webp";
+import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   return (
