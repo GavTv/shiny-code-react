@@ -8,7 +8,7 @@ import LocationBanner from "@/components/LocationBanner";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
-import PromoModal from "@/components/PromoModal";
+import PromoBanner from "@/components/PromoBanner";
 import SEO from "@/components/SEO";
 
 const Index = () => {
