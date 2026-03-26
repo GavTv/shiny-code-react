@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import ctaPerson from "@/assets/cta-person.webp";
+import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background photo */}
       <div className="absolute inset-0 z-[1]">
-        <img src={ctaPerson} alt="" className="w-full h-full object-cover object-[center_20%]" />
+        <img src={heroBg} alt="" className="w-full h-full object-cover object-center" />
       </div>
       
       {/* Overlay */}
