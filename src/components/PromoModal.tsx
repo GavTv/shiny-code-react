@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { X, Music } from "lucide-react";
+import { X } from "lucide-react";
 import { Link } from "react-router-dom";
+import promoSinger from "@/assets/promo-singer.jpg";
 
 const STORAGE_KEY = "promo_vocal_shown";
 
@@ -29,38 +30,47 @@ const PromoModal = () => {
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-sm bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in"
+        className="relative w-full max-w-lg bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in"
       >
-        <div className="h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
+        {/* Image */}
+        <div className="relative h-48 md:h-56 overflow-hidden">
+          <img
+            src={promoSinger}
+            alt="Урок вокала"
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+          <div className="absolute bottom-4 left-0 right-0 text-center">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-accent-foreground font-heading font-bold text-sm md:text-base shadow-lg">
+              Скидка 300 ₽
+            </span>
+          </div>
+        </div>
 
+        {/* Close */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
+          className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
         >
           <X size={18} />
         </button>
 
-        <div className="p-6 pt-5 md:p-8 md:pt-6 flex flex-col items-center text-center gap-4">
-          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
-            <Music className="w-6 h-6 md:w-7 md:h-7 text-primary" />
-          </div>
-
-          <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground">
-            Первый урок вокала — всего 700&nbsp;₽
+        {/* Content */}
+        <div className="px-6 pb-6 pt-2 md:px-8 md:pb-8 flex flex-col items-center text-center gap-3 md:gap-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground leading-snug">
+            Первый урок вокала —<br />всего 700&nbsp;₽
           </h2>
 
-          <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed">
-            Попробуйте и&nbsp;убедитесь сами!
-            <br />
-            Запишитесь прямо сейчас.
+          <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed max-w-sm">
+            Попробуйте и&nbsp;убедитесь сами! Опытный преподаватель подберёт программу именно для&nbsp;вас.
           </p>
 
           <Link
             to="/contacts"
             onClick={handleClose}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-lg transition-all duration-200 hover:opacity-90 active:scale-[0.98] shadow-lg"
           >
-            Записаться
+            Записаться на урок
           </Link>
 
           <button
