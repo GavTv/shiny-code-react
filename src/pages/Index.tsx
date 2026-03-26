@@ -23,6 +23,7 @@ const Index = () => {
       />
       <Navigation />
       <HeroSection />
+      <PromoBanner />
       <FeaturesSection />
       <StatsSection />
       <ReviewsSection />
@@ -30,7 +31,6 @@ const Index = () => {
       <CTASection />
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
-      <PromoModal />
     </div>
   );
 };
