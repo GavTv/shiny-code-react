@@ -33,18 +33,13 @@ const PromoModal = () => {
         className="relative w-full max-w-lg bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in"
       >
         {/* Image */}
-        <div className="relative h-48 md:h-56 overflow-hidden">
+        <div className="relative h-56 md:h-64 overflow-hidden">
           <img
             src={promoSinger}
             alt="Урок вокала"
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-[center_20%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-          <div className="absolute bottom-4 left-0 right-0 text-center">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-accent-foreground font-heading font-bold text-sm md:text-base shadow-lg">
-              Скидка 300 ₽
-            </span>
-          </div>
+          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card to-transparent" />
         </div>
 
         {/* Close */}
