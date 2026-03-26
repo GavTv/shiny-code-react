@@ -1,20 +1,15 @@
 import { useState, useEffect } from "react";
-import { X, Copy, Check, ExternalLink, Music } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { X, Music } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const PROMO_LOVESOUND = "lovesound";
-const PROMO_MUSIC500 = "MUSIC500";
-const STORAGE_KEY = "promo_modal_shown";
-const PARTNER_URL = "https://novobeauty.ru/?promo=music500&utm_source=zvschool";
+const STORAGE_KEY = "promo_vocal_shown";
 
 const PromoModal = () => {
   const [open, setOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
-  const { toast } = useToast();
 
   useEffect(() => {
     if (sessionStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setOpen(true), 3000);
+    const timer = setTimeout(() => setOpen(true), 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,26 +18,7 @@ const PromoModal = () => {
     sessionStorage.setItem(STORAGE_KEY, "1");
   };
 
-  const handleCopyBoth = async () => {
-    const text = `1. Промокод на пробник: ${PROMO_LOVESOUND}\n2. Промокод NovoBeauty: ${PROMO_MUSIC500}`;
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      toast({ title: "Оба промокода скопированы!", description: `«${PROMO_LOVESOUND}» и «${PROMO_MUSIC500}» в буфере` });
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      toast({ title: "Не удалось скопировать", variant: "destructive" });
-    }
-  };
-
   if (!open) return null;
-
-  const services = [
-    "Архитектура бровей",
-    "Чистка лица (ультразвук)",
-    "Абсолютное счастье для волос",
-    "Маникюр-Педикюр (комплекс)",
-  ];
 
   return (
     <div
@@ -53,7 +29,7 @@ const PromoModal = () => {
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-md bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in"
+        className="relative w-full max-w-sm bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in"
       >
         <div className="h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
 
@@ -64,73 +40,28 @@ const PromoModal = () => {
           <X size={18} />
         </button>
 
-        <div className="p-4 pt-3 md:p-8 md:pt-6 flex flex-col items-center text-center gap-2.5 md:gap-4">
-          <div className="w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center">
-            <span className="text-lg md:text-2xl" role="img" aria-label="spring">🌷</span>
+        <div className="p-6 pt-5 md:p-8 md:pt-6 flex flex-col items-center text-center gap-4">
+          <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/10 flex items-center justify-center">
+            <Music className="w-6 h-6 md:w-7 md:h-7 text-primary" />
           </div>
 
-          <h2 className="font-heading text-lg md:text-2xl font-bold text-foreground">
-            С 8 Марта! Два подарка 💐
+          <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground">
+            Первый урок вокала — всего 700&nbsp;₽
           </h2>
-          <p className="text-sm text-muted-foreground font-body -mt-1">
-            Дарим бонусы к&nbsp;празднику&nbsp;весны
+
+          <p className="text-sm md:text-base text-muted-foreground font-body leading-relaxed">
+            Попробуйте и&nbsp;убедитесь сами!
+            <br />
+            Запишитесь прямо сейчас.
           </p>
 
-          {/* Bonus 1 */}
-          <div className="w-full rounded-xl bg-muted/50 border border-border p-3 md:p-4 text-left">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-primary font-heading font-bold text-sm md:text-base">1.</span>
-              <span className="font-heading font-bold text-sm md:text-base text-foreground">
-                Пробник за <span className="line-through text-muted-foreground">1000</span> 700&nbsp;₽
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Промокод:</span>
-              <span className="font-heading font-bold text-primary text-base md:text-lg tracking-wider">{PROMO_LOVESOUND}</span>
-            </div>
-          </div>
-
-          {/* Bonus 2 */}
-          <div className="w-full rounded-xl bg-muted/50 border border-border p-3 md:p-4 text-left">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-primary font-heading font-bold text-sm md:text-base">2.</span>
-              <span className="font-heading font-bold text-sm md:text-base text-foreground">
-                Скидка 500&nbsp;₽ в&nbsp;NovoBeauty
-              </span>
-            </div>
-            <ul className="space-y-0.5 mb-2 ml-5">
-              {services.map((s) => (
-                <li key={s} className="flex items-start gap-1.5 text-xs md:text-sm text-muted-foreground font-body">
-                  <span className="text-primary mt-0.5 text-[10px]">✦</span>
-                  {s}
-                </li>
-              ))}
-            </ul>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider">Промокод:</span>
-              <span className="font-heading font-bold text-primary text-base md:text-lg tracking-wider">{PROMO_MUSIC500}</span>
-            </div>
-          </div>
-
-          {/* Copy both */}
-          <button
-            onClick={handleCopyBoth}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 md:px-6 md:py-3 rounded-xl md:rounded-2xl bg-muted text-foreground font-heading font-bold text-sm md:text-base transition-all duration-200 hover:bg-muted/80 active:scale-[0.98]"
+          <Link
+            to="/contacts"
+            onClick={handleClose}
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-accent text-accent-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:opacity-90 active:scale-[0.98]"
           >
-            {copied ? <Check size={16} /> : <Copy size={16} />}
-            {copied ? "Скопировано!" : "Скопировать оба промокода"}
-          </button>
-
-          {/* CTA */}
-          <a
-            href={PARTNER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 md:px-6 md:py-4 rounded-xl md:rounded-2xl bg-primary text-primary-foreground font-heading font-bold text-base md:text-lg transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
-          >
-            <ExternalLink size={18} />
-            Перейти на сайт салона
-          </a>
+            Записаться
+          </Link>
 
           <button
             onClick={handleClose}
