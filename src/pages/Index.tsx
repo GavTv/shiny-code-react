@@ -8,7 +8,7 @@ import LocationBanner from "@/components/LocationBanner";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
-import PromoModal from "@/components/PromoModal";
+import PromoBanner from "@/components/PromoBanner";
 import SEO from "@/components/SEO";
 
 const Index = () => {
@@ -23,6 +23,7 @@ const Index = () => {
       />
       <Navigation />
       <HeroSection />
+      <PromoBanner />
       <FeaturesSection />
       <StatsSection />
       <ReviewsSection />
@@ -30,7 +31,6 @@ const Index = () => {
       <CTASection />
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
-      <PromoModal />
     </div>
   );
 };
