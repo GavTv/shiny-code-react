@@ -4,14 +4,14 @@ const packages = [
     period: "1 урок",
     prices: [
       { amount: "1 000 ₽", label: "Все категории" },
-      { amount: "Бесплатно", label: "При покупке абонемента" },
+      { amount: "", label: "" },
     ],
     description: "Познакомьтесь с преподавателем и форматом обучения без обязательств",
     featured: false,
   },
   {
     badge: "Старт",
-    period: "1 месяц",
+    period: "1 занятие ",
     prices: [
       { amount: "3 200 руб", label: "Дети" },
       { amount: "3 500 руб", label: "Взрослые" },
