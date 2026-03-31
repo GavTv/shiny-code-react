@@ -230,12 +230,6 @@ const [discipline, setDiscipline] = useState("");
 const LocationsSection = () =>
 <section className="py-16 md:py-24">
     <div className="max-w-[84rem] mx-auto px-6">
-      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground text-center mb-3">Где нас найти
-
-    </h2>
-      <p className="text-center text-muted-foreground font-body text-lg mb-12">
-        Мы принимаем клиентов в нашей студии в Москве. Приходите на пробный урок в удобное для вас время!
-      </p>
       <div className="max-w-md mx-auto">
         <article className="relative bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)] overflow-hidden">
           <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-full" />
