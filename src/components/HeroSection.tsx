@@ -6,7 +6,7 @@ const HeroSection = () => {
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-primary">
 
       {/* Content */}
-      <div className="relative z-[3] w-full max-w-[84rem] flex flex-col items-center text-center gap-6 px-5 py-12">
+      <div className="relative w-full max-w-[84rem] flex flex-col items-center text-center gap-6 px-5 py-12">
         <h1 className="font-heading text-3xl md:text-6xl font-bold text-background leading-tight">
           Музыкальная школа
           <br />
