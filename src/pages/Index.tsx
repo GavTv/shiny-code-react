@@ -23,7 +23,7 @@ const Index = () => {
       />
       <Navigation />
       <HeroSection />
-      <LocationBanner />
+      
       <PromoModal />
       <FeaturesSection />
       <StatsSection />
