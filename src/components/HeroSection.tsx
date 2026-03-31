@@ -1,17 +1,9 @@
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
-import heroBg from "@/assets/hero-bg.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background photo */}
-      <div className="absolute inset-0 z-[1]">
-        <img src={heroBg} alt="" className="w-full h-full object-cover object-center" />
-      </div>
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 z-[2] bg-black/50" />
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-primary">
 
       {/* Content */}
       <div className="relative z-[3] w-full max-w-[84rem] flex flex-col items-center text-center gap-6 px-5 py-12">
