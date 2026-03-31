@@ -207,6 +207,19 @@ const [discipline, setDiscipline] = useState("");
               </p>
             </form>
           </div>
+          {/* Image */}
+          <div className="relative rounded-[24px] overflow-hidden min-h-[400px] aspect-[3/4]">
+            {discipline && disciplineImages[discipline] ?
+            <img
+              src={disciplineImages[discipline]}
+              alt={discipline}
+              className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" /> :
+            <img
+              src={formDefaultImg}
+              alt="Звук Вокруг"
+              className="absolute inset-0 w-full h-full object-cover" />
+            }
+          </div>
         </div>
       </div>
     </section>);
