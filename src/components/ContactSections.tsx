@@ -122,21 +122,6 @@ const [discipline, setDiscipline] = useState("");
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="max-w-[84rem] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-          {/* Image placeholder */}
-          <div className="relative rounded-[24px] overflow-hidden min-h-[400px] aspect-[3/4]">
-            {discipline && disciplineImages[discipline] ?
-            <img
-              src={disciplineImages[discipline]}
-              alt={discipline}
-              className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" /> :
-
-
-            <img
-              src={formDefaultImg}
-              alt="Звук Вокруг"
-              className="absolute inset-0 w-full h-full object-cover" />
-            }
-          </div>
           {/* Form */}
           <div className="bg-card rounded-[24px] p-8 shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-2">
@@ -221,6 +206,19 @@ const [discipline, setDiscipline] = useState("");
                 </button>.
               </p>
             </form>
+          </div>
+          {/* Image */}
+          <div className="relative rounded-[24px] overflow-hidden min-h-[400px] aspect-[3/4]">
+            {discipline && disciplineImages[discipline] ?
+            <img
+              src={disciplineImages[discipline]}
+              alt={discipline}
+              className="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-500" /> :
+            <img
+              src={formDefaultImg}
+              alt="Звук Вокруг"
+              className="absolute inset-0 w-full h-full object-cover" />
+            }
           </div>
         </div>
       </div>
