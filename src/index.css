@@ -129,5 +129,5 @@
   background: hsl(var(--background));
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: 0 24px 60px rgba(100, 50, 200, 0.25);
+  box-shadow: 0 24px 60px rgba(15, 30, 60, 0.25);
 }
