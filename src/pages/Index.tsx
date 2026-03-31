@@ -23,11 +23,11 @@ const Index = () => {
       />
       <Navigation />
       <HeroSection />
+      <LocationBanner />
       <PromoModal />
       <FeaturesSection />
       <StatsSection />
       <ReviewsSection />
-      <LocationBanner />
       <CTASection />
       <Footer onPrivacyOpen={() => setPrivacyOpen(true)} />
       <PrivacyModal open={privacyOpen} onClose={() => setPrivacyOpen(false)} />
