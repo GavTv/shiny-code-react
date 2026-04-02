@@ -3,7 +3,7 @@ import { Mic, Guitar, Headphones, User, ChevronDown } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-import aleksandra2Img from "@/assets/teachers/aleksandra2.jpg";
+
 import borisImg from "@/assets/teachers/boris.webp";
 import kirillImg from "@/assets/teachers/kirill.webp";
 
@@ -70,19 +70,6 @@ const teachers: Teacher[] = [
       "Образование: Московский Педагогический Государственный Университет.",
       "Достижения: В составе своей музыкальной группы попадал в редакторские плейлисты стриминговых сервисов и был в ротации радио «Мегаполис».",
       "Методика: структура занятий для эффективной музыки с удовольствием и производительностью.",
-    ],
-  },
-  {
-    name: "Александра Белова",
-    specialty: "Вокал и актёрское мастерство",
-    specialtyEmoji: "🎤",
-    icon: <Mic size={20} />,
-    photo: aleksandra2Img,
-    description: [
-      "Александра — педагог по вокалу, профессиональная певица и актриса.",
-      "Образование: Алтайская академия искусств и культуры, Институт современного искусства (эстрадно-джазовый вокал).",
-      "Методика: соединяет вокал и актёрское мастерство, помогает раскрыть голос и уверенность на сцене.",
-      "Опыт: участник платформы Profty (методики ведущих педагогов США), педагог по актёрскому мастерству, режиссёр творческих проектов.",
     ],
   },
   {

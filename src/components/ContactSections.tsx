@@ -82,7 +82,7 @@ const [discipline, setDiscipline] = useState("");
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const trimmedPromo = promo.trim().toLowerCase();
-    if (trimmedPromo && trimmedPromo !== "lovesound" && trimmedPromo !== "beautysound") {
+    if (trimmedPromo && trimmedPromo !== "lovesound") {
       setPromoError("Такого промокода не существует");
       return;
     }

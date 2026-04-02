@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Главная", to: "/" },
   { label: "О нас", to: "/about" },
   { label: "Услуги", to: "/disciplines" },
-  { label: "🌸 8 Марта", to: "/march8" },
+  
   { label: "Блог", to: "/blog" },
   { label: "Контакты", to: "/contacts" },
 ];

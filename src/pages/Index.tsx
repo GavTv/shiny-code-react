@@ -8,7 +8,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import PrivacyModal from "@/components/PrivacyModal";
-import PromoModal from "@/components/PromoModal";
+
 import SEO from "@/components/SEO";
 
 const Index = () => {
@@ -24,7 +24,7 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       
-      <PromoModal />
+      
       <FeaturesSection />
       <StatsSection />
       <ReviewsSection />
