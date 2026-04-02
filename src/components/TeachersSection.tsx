@@ -3,7 +3,7 @@ import { Mic, Guitar, Headphones, User, ChevronDown } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-import aleksandra2Img from "@/assets/teachers/aleksandra2.jpg";
+
 import borisImg from "@/assets/teachers/boris.webp";
 import kirillImg from "@/assets/teachers/kirill.webp";
 
