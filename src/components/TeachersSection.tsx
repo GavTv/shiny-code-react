@@ -5,7 +5,7 @@ import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
 
 import borisImg from "@/assets/teachers/boris.webp";
-import kirillImg from "@/assets/teachers/kirill.webp";
+
 
 interface Teacher {
   name: string;
@@ -57,19 +57,6 @@ const teachers: Teacher[] = [
       "Индивидуальный подход, снятие зажима сцены, высокие ноты.",
       "Жанры: поп, рок, джаз, соул.",
       "Пишет песни/аранжировки, позитивная атмосфера.",
-    ],
-  },
-  {
-    name: "Кирилл Морозов",
-    specialty: "Гитара",
-    specialtyEmoji: "🎸",
-    icon: <Headphones size={20} />,
-    photo: kirillImg,
-    description: [
-      "Кирилл — педагог по гитаре.",
-      "Образование: Московский Педагогический Государственный Университет.",
-      "Достижения: В составе своей музыкальной группы попадал в редакторские плейлисты стриминговых сервисов и был в ротации радио «Мегаполис».",
-      "Методика: структура занятий для эффективной музыки с удовольствием и производительностью.",
     ],
   },
   {
