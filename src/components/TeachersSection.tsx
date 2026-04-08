@@ -5,7 +5,7 @@ import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
 
 import borisImg from "@/assets/teachers/boris.webp";
-import kirillImg from "@/assets/teachers/kirill.webp";
+
 
 interface Teacher {
   name: string;
