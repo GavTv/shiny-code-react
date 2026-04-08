@@ -3,7 +3,7 @@ const packages = [
     badge: "Пробный",
     period: "1 урок",
     prices: [
-      { amount: "1 000 ₽", label: "Все категории" },
+      { amount: "1 200 ₽", label: "Все категории" },
       { amount: "", label: "" },
     ],
     description: "Познакомьтесь с преподавателем и форматом обучения без обязательств",
