@@ -24,12 +24,6 @@ const HeroSection = () => {
           Подготовим к первым выступлениям уже через 3 месяца занятий
         </p>
 
-        <img
-          src={heroImage}
-          alt="Сцена с гитарой, микрофоном и клавишами — музыкальная школа Звук Вокруг"
-          className="w-full max-w-3xl rounded-2xl shadow-2xl mt-2"
-        />
-
         <Link
           to="/contacts"
           className="inline-flex items-center px-8 py-5 text-lg font-body font-semibold text-accent-foreground bg-accent rounded-2xl shadow-lg transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 mt-2"
