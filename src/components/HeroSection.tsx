@@ -4,7 +4,9 @@ import heroImage from "@/assets/hero-stage.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-primary">
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
+      <img src={heroImage} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/60" />
       <div className="relative w-full max-w-[84rem] flex flex-col items-center text-center gap-5 px-5 py-12">
         <h1 className="font-heading text-3xl md:text-6xl font-bold text-background leading-tight">
           Музыкальная школа
@@ -21,12 +23,6 @@ const HeroSection = () => {
         <p className="text-accent font-body text-sm md:text-base max-w-xl">
           Подготовим к первым выступлениям уже через 3 месяца занятий
         </p>
-
-        <img
-          src={heroImage}
-          alt="Сцена с гитарой, микрофоном и клавишами — музыкальная школа Звук Вокруг"
-          className="w-full max-w-3xl rounded-2xl shadow-2xl mt-2"
-        />
 
         <Link
           to="/contacts"
