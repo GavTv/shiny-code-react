@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import heroImage from "@/assets/hero-stage.png";
 
 const HeroSection = () => {
   return (
@@ -20,6 +21,12 @@ const HeroSection = () => {
         <p className="text-accent font-body text-sm md:text-base max-w-xl">
           Подготовим к первым выступлениям уже через 3 месяца занятий
         </p>
+
+        <img
+          src={heroImage}
+          alt="Сцена с гитарой, микрофоном и клавишами — музыкальная школа Звук Вокруг"
+          className="w-full max-w-3xl rounded-2xl shadow-2xl mt-2"
+        />
 
         <Link
           to="/contacts"
