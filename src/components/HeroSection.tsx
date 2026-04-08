@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin } from "lucide-react";
+import heroImage from "@/assets/hero-stage.png";
 
 const HeroSection = () => {
   return (
