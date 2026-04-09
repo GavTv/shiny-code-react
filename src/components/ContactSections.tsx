@@ -73,7 +73,8 @@ const QuickContact = () =>
 
 /* ─── Feedback Form ─── */
 const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
-const [discipline, setDiscipline] = useState("");
+const [name, setName] = useState("");
+  const [discipline, setDiscipline] = useState("");
   const [phone, setPhone] = useState("");
   const [promo, setPromo] = useState("");
   const [promoError, setPromoError] = useState("");
@@ -91,7 +92,7 @@ const [discipline, setDiscipline] = useState("");
 
     try {
       const response = await supabase.functions.invoke("send-to-telegram", {
-        body: { discipline, phone, promo: trimmedPromo }
+        body: { name: name.trim(), discipline, phone, promo: trimmedPromo }
       });
 
       console.log("Telegram response:", response);
@@ -105,6 +106,7 @@ const [discipline, setDiscipline] = useState("");
         description: "Ваша заявка получена, ожидайте звонка.",
         duration: 5000
       });
+      setName("");
       setDiscipline("");
       setPhone("");
       setPromo("");
@@ -131,6 +133,19 @@ const [discipline, setDiscipline] = useState("");
               Заполните форму, и мы свяжемся с вами для подтверждения записи.
             </p>
             <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
+                  Имя
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  placeholder="Ваше имя"
+                  maxLength={50}
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
                   Выберите дисциплину
