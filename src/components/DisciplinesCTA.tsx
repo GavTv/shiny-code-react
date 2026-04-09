@@ -14,7 +14,7 @@ const DisciplinesCTA = () => {
             </p>
           </div>
           <a
-            href="tel:+79162353381"
+            href="tel:89162353381"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-[16px] bg-accent text-primary-foreground font-heading font-bold text-lg hover:brightness-110 transition-all duration-300 hover:-translate-y-0.5 shadow-lg whitespace-nowrap"
           >
             Записаться сейчас
@@ -45,8 +45,8 @@ const ContactInfoSection = () => {
                 </div>
                 <div>
                   <span className="text-sm text-muted-foreground block">Телефон</span>
-                  <a href="tel:+79162353381" className="font-body font-semibold text-foreground hover:text-primary transition-colors">
-                    +7 (916) 235-33-81
+                  <a href="tel:89162353381" className="font-body font-semibold text-foreground hover:text-primary transition-colors">
+                    8 916 235-33-81
                   </a>
                 </div>
               </div>

@@ -53,8 +53,8 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
                 <div className="w-8 h-8 md:w-10 md:h-10 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary">
                   <Phone size={20} />
                 </div>
-                <a href="tel:+79162353381" className="text-foreground text-sm md:text-base font-body transition-colors hover:text-primary">
-                  +7 (916) 235-33-81
+                <a href="tel:89162353381" className="text-foreground text-sm md:text-base font-body transition-colors hover:text-primary">
+                  8 916 235-33-81
                 </a>
               </div>
               <div className="flex items-center gap-2 md:gap-3">

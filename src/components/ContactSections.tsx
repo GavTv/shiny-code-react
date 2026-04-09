@@ -33,7 +33,7 @@ const ContactHero = () =>
           Откройте для себя свой голос, инструмент или сценическое мастерство в уютной музыкальной школе-студии
         </p>
         <a
-        href="tel:+79162353381"
+        href="tel:89162353381"
         className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-[16px] bg-primary text-primary-foreground font-heading font-bold text-sm md:text-lg hover:bg-primary/90 transition-all duration-300 hover:-translate-y-0.5 shadow-lg">
         
           Запишись на пробный урок

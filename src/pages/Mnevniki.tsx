@@ -73,7 +73,7 @@ const Mnevniki = () => {
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+79162353381"
+              href="tel:89162353381"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-primary-foreground bg-primary rounded-2xl shadow-lg hover:opacity-90 transition-all"
             >
               <Phone size={20} />
@@ -193,7 +193,7 @@ const Mnevniki = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="tel:+79162353381"
+              href="tel:89162353381"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-accent-foreground bg-accent rounded-2xl shadow-lg hover:opacity-90 transition-all"
             >
               <Phone size={20} />
