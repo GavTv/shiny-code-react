@@ -135,6 +135,19 @@ const [name, setName] = useState("");
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
+                  Имя
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  placeholder="Ваше имя"
+                  maxLength={50}
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50" />
+              </div>
+              <div>
+                <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
                   Выберите дисциплину
                 </label>
                 <select
