@@ -106,6 +106,7 @@ const [name, setName] = useState("");
         description: "Ваша заявка получена, ожидайте звонка.",
         duration: 5000
       });
+      setName("");
       setDiscipline("");
       setPhone("");
       setPromo("");
