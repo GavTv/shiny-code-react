@@ -73,7 +73,8 @@ const QuickContact = () =>
 
 /* ─── Feedback Form ─── */
 const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
-const [discipline, setDiscipline] = useState("");
+const [name, setName] = useState("");
+  const [discipline, setDiscipline] = useState("");
   const [phone, setPhone] = useState("");
   const [promo, setPromo] = useState("");
   const [promoError, setPromoError] = useState("");
