@@ -34,10 +34,10 @@ const HeroSection = () => {
         <div className="flex items-center gap-3 text-background/70 text-sm md:text-base">
           <span>или позвоните</span>
           <a
-            href="tel:+79162353381"
+            href="tel:89162353381"
             className="text-background font-bold hover:opacity-90 transition-opacity"
           >
-            +7 (916) 235‑33‑81
+            8 916 235‑33‑81
           </a>
           <a
             href="https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0"
