@@ -92,7 +92,7 @@ const [name, setName] = useState("");
 
     try {
       const response = await supabase.functions.invoke("send-to-telegram", {
-        body: { discipline, phone, promo: trimmedPromo }
+        body: { name: name.trim(), discipline, phone, promo: trimmedPromo }
       });
 
       console.log("Telegram response:", response);
