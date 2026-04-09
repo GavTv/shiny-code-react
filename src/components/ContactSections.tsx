@@ -53,8 +53,8 @@ const QuickContact = () =>
             <Phone size={32} />
           </div>
           <h3 className="font-heading font-bold text-foreground mb-2">Телефон</h3>
-          <a href="tel:+79162353382" className="font-body text-muted-foreground hover:text-primary transition-colors">
-            +7 (916) 235-33-82
+          <a href="tel:+79162353381" className="font-body text-muted-foreground hover:text-primary transition-colors">
+            +7 (916) 235-33-81
           </a>
         </div>
         <div className="bg-card rounded-[24px] p-8 text-center shadow-[0_4px_12px_rgba(100,50,200,0.15)]">
