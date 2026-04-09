@@ -13,7 +13,7 @@ const CTASection = () => {
           </div>
           <div className="flex flex-col gap-1 md:gap-2">
             <h3 className="text-base md:text-xl font-heading font-bold text-primary-foreground leading-snug">
-              Запишись на пробный урок — пробное занятие 1000 руб.
+              Запишись на пробный урок — пробное занятие 1200 руб.
             </h3>
             <p className="text-primary-foreground/95 text-xs md:text-base leading-relaxed">
               Познакомьтесь с преподавателями и студией
