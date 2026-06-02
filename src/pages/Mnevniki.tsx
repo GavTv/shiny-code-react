@@ -71,7 +71,7 @@ const Mnevniki = () => {
             Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Мнёвники,&nbsp;7к1. Пробный урок 45&nbsp;минут — <strong className="text-accent">700&nbsp;₽ по акции</strong>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             <a
               href="tel:89162353381"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-primary-foreground bg-primary rounded-2xl shadow-lg hover:opacity-90 transition-all"
@@ -87,6 +87,17 @@ const Mnevniki = () => {
             >
               <PhoneCall size={20} />
               Написать в Telegram
+            </a>
+            <a
+              href="https://wa.me/79162353381"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-primary bg-background border-2 border-primary rounded-2xl shadow hover:bg-primary/5 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.06.56 4.07 1.62 5.83L2.5 22l4.37-1.21a9.85 9.85 0 0 0 5.17 1.47c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 17.82a7.93 7.93 0 0 1-4.05-1.12l-.29-.18-2.55.71.68-2.48-.18-.29A7.91 7.91 0 0 1 12.04 3.99c4.37 0 7.93 3.56 7.93 7.93 0 2.16-.85 4.2-2.38 5.73a7.96 7.96 0 0 1-5.55 2.17zm4.47-6.04c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.77.95-.14.16-.29.18-.54.06-.24-.12-1.03-.38-1.97-1.22-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.1-.5.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.29-.02-.4-.06-.11-.54-1.31-.74-1.79-.2-.46-.39-.4-.54-.4-.14 0-.29-.02-.44-.02-.16 0-.4.06-.61.29-.21.22-.8.78-.8 1.91s.82 2.22.93 2.37c.11.16 1.62 2.48 3.92 3.48.55.24.97.38 1.3.48.55.18 1.05.15 1.45.1.44-.06 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/>
+              </svg>
+              WhatsApp
             </a>
           </div>
         </div>
@@ -191,7 +202,7 @@ const Mnevniki = () => {
           <p className="font-body text-primary-foreground/90 mb-7">
             45 минут знакомства с преподавателем и студией на Мнёвниках
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <div className="flex flex-wrap gap-3 justify-center">
             <a
               href="tel:89162353381"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-accent-foreground bg-accent rounded-2xl shadow-lg hover:opacity-90 transition-all"
@@ -207,6 +218,17 @@ const Mnevniki = () => {
             >
               <PhoneCall size={20} />
               Telegram
+            </a>
+            <a
+              href="https://wa.me/79162353381"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 text-lg font-heading font-bold text-primary bg-background rounded-2xl shadow hover:bg-primary/5 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 2.06.56 4.07 1.62 5.83L2.5 22l4.37-1.21a9.85 9.85 0 0 0 5.17 1.47c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 17.82a7.93 7.93 0 0 1-4.05-1.12l-.29-.18-2.55.71.68-2.48-.18-.29A7.91 7.91 0 0 1 12.04 3.99c4.37 0 7.93 3.56 7.93 7.93 0 2.16-.85 4.2-2.38 5.73a7.96 7.96 0 0 1-5.55 2.17zm4.47-6.04c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.77.95-.14.16-.29.18-.54.06-.24-.12-1.03-.38-1.97-1.22-.72-.64-1.21-1.43-1.35-1.67-.14-.24-.01-.37.1-.5.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.29-.02-.4-.06-.11-.54-1.31-.74-1.79-.2-.46-.39-.4-.54-.4-.14 0-.29-.02-.44-.02-.16 0-.4.06-.61.29-.21.22-.8.78-.8 1.91s.82 2.22.93 2.37c.11.16 1.62 2.48 3.92 3.48.55.24.97.38 1.3.48.55.18 1.05.15 1.45.1.44-.06 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/>
+              </svg>
+              WhatsApp
             </a>
           </div>
         </div>
