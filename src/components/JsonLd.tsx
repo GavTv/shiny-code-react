@@ -26,6 +26,7 @@ const localBusinessSchema = {
   sameAs: [
     "https://t.me/zv_musicstudio",
     "https://vk.com/studiozv",
+    "https://wa.me/79162353381",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
