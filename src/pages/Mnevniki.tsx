@@ -21,7 +21,7 @@ const disciplines = [
 ];
 
 const advantages = [
-  "6 опытных преподавателей",
+  "4 опытных преподавателя",
   "Индивидуальные и групповые занятия",
   "Своя студия звукозаписи",
   "Концерты для учеников каждый сезон",
@@ -44,8 +44,8 @@ const Mnevniki = () => {
   return (
     <div className="w-full min-h-screen">
       <SEO
-        title="Звук Вокруг Мнёвники | Школа вокала и гитары — пробник 700 руб"
-        description="Уроки вокала, гитары, пианино в Звук Вокруг Мнёвники (ул. Мнёвники 7к1). Пробник 45 мин — 700 руб акция. 6 опытных преподавателей."
+        title="Звук Вокруг Мнёвники | Школа вокала и гитары — пробник 1200 руб"
+        description="Уроки вокала, гитары, пианино в Звук Вокруг Мнёвники (ул. Мнёвники 7к1). Пробник 45 мин — 1200 руб. 4 опытных преподавателя."
         path="/mnevniki"
       />
       <Helmet>
@@ -68,7 +68,7 @@ const Mnevniki = () => {
           </h1>
 
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Мнёвники,&nbsp;7к1. Пробный урок 45&nbsp;минут — <strong className="text-accent">700&nbsp;₽ по акции</strong>.
+            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Мнёвники,&nbsp;7к1. Пробный урок 45&nbsp;минут — <strong className="text-accent">1200&nbsp;₽</strong>.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">
@@ -197,7 +197,7 @@ const Mnevniki = () => {
       <section className="w-full py-12 md:py-16 px-4 bg-gradient-to-br from-primary to-secondary">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-            Запишитесь на пробный урок — 700 ₽
+            Запишитесь на пробный урок — 1200 ₽
           </h2>
           <p className="font-body text-primary-foreground/90 mb-7">
             45 минут знакомства с преподавателем и студией на Мнёвниках
