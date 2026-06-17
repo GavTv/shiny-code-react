@@ -106,7 +106,7 @@ const BlogGitaraNovichki = () => {
           <div className="bg-gradient-to-br from-primary/8 to-accent/8 rounded-3xl p-6 md:p-8">
             <p className="text-foreground font-body flex items-start gap-3">
               <Guitar size={24} className="text-primary flex-shrink-0 mt-0.5" />
-              <span>В <strong>Звук Вокруг</strong> гитара от 700 руб за пробный урок. Преподаватель разберёт ваши ошибки и составит индивидуальный план — вы начнёте играть правильно с первого дня.</span>
+              <span>В <strong>Звук Вокруг</strong> гитара от 1200 руб за пробный урок. Преподаватель разберёт ваши ошибки и составит индивидуальный план — вы начнёте играть правильно с первого дня.</span>
             </p>
           </div>
 
