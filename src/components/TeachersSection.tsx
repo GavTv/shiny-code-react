@@ -3,7 +3,7 @@ import { Mic, Guitar, Headphones, User, ChevronDown } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-
+import annaImg from "@/assets/teachers/anna.webp";
 import borisImg from "@/assets/teachers/boris.webp";
 
 
@@ -24,7 +24,7 @@ const teachers: Teacher[] = [
     icon: <Mic size={20} />,
     photo: aleksandrImg,
     description: [
-      "Саша — педагог по гитаре, профессиональный музыкант.",
+      "Александр — педагог по гитаре, профессиональный музыкант.",
       "Образование: Старооскольская Музыкальная Школа.",
       "Московская джазовая студия C JAM CLUB (гитара, джазовые инструменты).",
       "Достижения: 20 лет выступлений на фестивалях, гастролях, клубах. Участник групп разных жанров, автор песен, аранжировок, ремиксов.",
@@ -46,12 +46,12 @@ const teachers: Teacher[] = [
   },
   {
     name: "Анастасия Оленберг",
-    specialty: "Вокал",
-    specialtyEmoji: "🎤",
-    icon: <Guitar size={20} />,
+    specialty: "Вокал, фортепиано",
+    specialtyEmoji: "🎤🎹",
+    icon: <Mic size={20} />,
     photo: nastyaImg,
     description: [
-      "Анастасия — педагог эстрадного вокала.",
+      "Анастасия — педагог эстрадного вокала и фортепиано.",
       "Образование (Свердловское училище с отличием, Berklee, HSE).",
       "4 года опыта, ученики — лауреаты конкурсов.",
       "Индивидуальный подход, снятие зажима сцены, высокие ноты.",
@@ -71,6 +71,18 @@ const teachers: Teacher[] = [
       "Бас-гитарист Lunar Miura, сольные выступления.",
       "Учит классику, акустику, электрогитару, бас, укулеле.",
       "Любой стиль: рок, джаз, классика.",
+    ],
+  },
+  {
+    name: "Анна Золотарёва",
+    specialty: "Вокал, фортепиано",
+    specialtyEmoji: "🎤🎹",
+    icon: <Mic size={20} />,
+    photo: annaImg,
+    description: [
+      "Анна — автор и исполнитель собственной музыки, педагог по вокалу и фортепиано, активная концертирующая артистка.",
+      "Обучает свободному и выразительному звучанию в стилях поп, рок, джаз, фанк, соул, блюз и романсы.",
+      "Помогает написать собственные песни и научиться аккомпанировать себе за фортепиано.",
     ],
   },
 ];
