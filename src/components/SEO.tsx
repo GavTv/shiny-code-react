@@ -9,7 +9,7 @@ interface SEOProps {
 
 const SITE_URL = "https://zvschool.ru";
 const SITE_NAME = "Звук Вокруг — музыкальная студия";
-const OG_IMAGE = "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/074744aa-4922-45ff-9fa7-c8cc29cb891a/id-preview-8df6c1dd--920cc617-8804-4a51-b8d2-1a15784cacb7.lovable.app-1772198769589.png";
+const OG_IMAGE = "https://zvschool.ru/og-image.png";
 
 const SEO = ({ title, description, path, type = "website" }: SEOProps) => {
   const url = `${SITE_URL}${path}`;
