@@ -145,11 +145,11 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
         </button>
 
         <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
-          <div className="w-full aspect-[16/10] md:aspect-[2/1] overflow-hidden flex-shrink-0">
+          <div className="w-full bg-muted flex items-center justify-center flex-shrink-0">
             {teacher.photo ? (
-              <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-center" />
+              <img src={teacher.photo} alt={teacher.name} className="w-full max-h-[45vh] object-contain" />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
+              <div className="w-full aspect-[16/10] bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
                 <User size={80} className="text-primary/40" />
               </div>
             )}
