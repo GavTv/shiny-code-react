@@ -169,8 +169,6 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           </div>
         </div>
       </div>
-        </div>
-      </div>
     </div>
   );
 };
