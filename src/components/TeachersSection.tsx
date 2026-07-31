@@ -144,7 +144,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           <X size={16} />
         </button>
 
-        <div className="w-full md:w-[45%] flex-shrink-0 bg-muted">
+        <div className="w-full md:w-[45%] flex-shrink-0 bg-muted aspect-[3/4] md:aspect-auto md:h-auto md:min-h-0">
           {teacher.photo ? (
             <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-top" />
           ) : (
