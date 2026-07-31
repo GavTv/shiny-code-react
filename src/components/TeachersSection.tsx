@@ -135,7 +135,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-[340px] md:max-w-[720px] max-h-[82vh] md:max-h-[85vh] bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col md:flex-row"
+        className="relative w-full max-w-[320px] md:max-w-[720px] max-h-[78vh] md:max-h-[85vh] bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col md:flex-row"
       >
         <button
           onClick={onClose}
