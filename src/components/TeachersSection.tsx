@@ -135,7 +135,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl max-h-[90vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
+        className="relative w-full max-w-2xl max-h-[80vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
       >
         <button
           onClick={onClose}
@@ -144,7 +144,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           <X size={18} />
         </button>
 
-        <div className="overflow-y-auto custom-scrollbar">
+        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
           <div className="w-full aspect-[16/10] md:aspect-[2/1] overflow-hidden flex-shrink-0">
             {teacher.photo ? (
               <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-center" />
