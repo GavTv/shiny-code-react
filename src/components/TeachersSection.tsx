@@ -128,23 +128,23 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-4 animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-center justify-center p-3 md:p-4 animate-fade-in"
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-[420px] md:max-w-[720px] max-h-[88vh] md:max-h-[85vh] bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col md:flex-row"
+        className="relative w-full max-w-[340px] md:max-w-[720px] max-h-[82vh] md:max-h-[85vh] bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col md:flex-row"
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/60 transition-colors"
+          className="absolute top-2 right-2 md:top-3 md:right-3 z-20 w-7 h-7 md:w-8 md:h-8 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/60 transition-colors"
         >
-          <X size={16} />
+          <X size={14} className="md:w-4 md:h-4" />
         </button>
 
-        <div className="w-full md:w-[45%] flex-shrink-0 bg-muted aspect-[3/4] md:aspect-auto md:h-auto md:min-h-0">
+        <div className="hidden md:block w-[45%] flex-shrink-0 bg-muted">
           {teacher.photo ? (
             <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-top" />
           ) : (
@@ -154,16 +154,28 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           )}
         </div>
 
-        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar p-4 md:p-6">
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-primary [&>svg]:w-4 [&>svg]:h-4">{teacher.icon}</span>
-            <span className="font-body text-xs text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
+        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
+          <div className="md:hidden w-full aspect-[3/4] bg-muted flex-shrink-0">
+            {teacher.photo ? (
+              <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-top" />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
+                <User size={64} className="text-primary/40" />
+              </div>
+            )}
           </div>
-          <h3 className="font-heading text-lg md:text-2xl font-bold text-foreground mb-2 md:mb-3">{teacher.name}</h3>
-          <div className="space-y-1.5 md:space-y-2">
-            {teacher.description.map((line, i) => (
-              <p key={i} className="font-body text-[13px] md:text-sm text-muted-foreground leading-relaxed">{line}</p>
-            ))}
+
+          <div className="p-4 md:p-6">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-primary [&>svg]:w-3.5 [&>svg]:h-3.5 md:[&>svg]:w-4 md:[&>svg]:h-4">{teacher.icon}</span>
+              <span className="font-body text-[11px] md:text-xs text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
+            </div>
+            <h3 className="font-heading text-lg md:text-2xl font-bold text-foreground mb-2 md:mb-3">{teacher.name}</h3>
+            <div className="space-y-1.5 md:space-y-2">
+              {teacher.description.map((line, i) => (
+                <p key={i} className="font-body text-[12px] md:text-sm text-muted-foreground leading-relaxed">{line}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
