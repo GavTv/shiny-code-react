@@ -155,7 +155,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
         </div>
 
         <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
-          <div className="md:hidden w-full aspect-[3/4] bg-muted flex-shrink-0">
+          <div className="md:hidden w-full aspect-[4/5] bg-muted flex-shrink-0">
             {teacher.photo ? (
               <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-top" />
             ) : (
