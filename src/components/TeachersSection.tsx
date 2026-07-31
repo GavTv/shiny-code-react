@@ -135,35 +135,35 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl max-h-[80vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
+        className="relative w-full max-w-[380px] md:max-w-md max-h-[88vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
       >
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
+          className="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center text-white hover:bg-black/50 transition-colors"
         >
-          <X size={18} />
+          <X size={16} />
         </button>
 
         <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
-          <div className="w-full bg-muted flex items-center justify-center flex-shrink-0">
+          <div className="w-full aspect-[3/4] overflow-hidden flex-shrink-0">
             {teacher.photo ? (
-              <img src={teacher.photo} alt={teacher.name} className="w-full max-h-[45vh] object-contain" />
+              <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-top" />
             ) : (
-              <div className="w-full aspect-[16/10] bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
-                <User size={80} className="text-primary/40" />
+              <div className="w-full h-full bg-gradient-to-br from-primary/15 via-accent/10 to-primary/25 flex items-center justify-center">
+                <User size={72} className="text-primary/40" />
               </div>
             )}
           </div>
 
-          <div className="p-6 md:p-8">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-primary">{teacher.icon}</span>
-              <span className="font-body text-sm text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
+          <div className="p-5 md:p-6">
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="text-primary [&>svg]:w-4 [&>svg]:h-4">{teacher.icon}</span>
+              <span className="font-body text-xs text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
             </div>
-            <h3 className="font-heading text-2xl md:text-3xl font-bold text-foreground mb-4">{teacher.name}</h3>
-            <div className="space-y-2 md:space-y-3">
+            <h3 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-3">{teacher.name}</h3>
+            <div className="space-y-2">
               {teacher.description.map((line, i) => (
-                <p key={i} className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">{line}</p>
+                <p key={i} className="font-body text-[13px] md:text-sm text-muted-foreground leading-relaxed">{line}</p>
               ))}
             </div>
           </div>
