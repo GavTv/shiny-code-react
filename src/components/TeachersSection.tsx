@@ -90,7 +90,7 @@ const teachers: Teacher[] = [
 const TeacherCard = ({ teacher, onClick }: { teacher: Teacher; onClick: () => void }) => {
   return (
     <article
-      className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-shadow duration-300 cursor-pointer"
+      className="group bg-card rounded-xl md:rounded-[24px] overflow-hidden shadow-[0_4px_12px_rgba(100,50,200,0.15)] hover:shadow-[0_12px_32px_rgba(100,50,200,0.2)] transition-shadow duration-300 cursor-pointer h-full flex flex-col"
       onClick={onClick}
     >
       <div className="w-full aspect-[3/4] overflow-hidden">
@@ -102,9 +102,9 @@ const TeacherCard = ({ teacher, onClick }: { teacher: Teacher; onClick: () => vo
           </div>
         )}
       </div>
-      <div className="p-3 md:p-6">
-        <h3 className="font-heading text-[13px] leading-tight md:text-xl font-bold text-foreground mb-1 md:mb-2">{teacher.name}</h3>
-        <div className="flex items-center gap-1 md:gap-2">
+      <div className="p-3 md:p-6 flex-1 flex flex-col justify-center">
+        <h3 className="font-heading text-[13px] leading-tight md:text-xl font-bold text-foreground mb-1 md:mb-2 text-center">{teacher.name}</h3>
+        <div className="flex items-center justify-center gap-1 md:gap-2">
           <span className="text-primary [&>svg]:w-3.5 [&>svg]:h-3.5 md:[&>svg]:w-5 md:[&>svg]:h-5">{teacher.icon}</span>
           <span className="font-body text-[11px] md:text-sm text-muted-foreground">{teacher.specialty} {teacher.specialtyEmoji}</span>
         </div>
@@ -135,7 +135,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
       <div
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-2xl max-h-[90vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
+        className="relative w-full max-w-2xl max-h-[80vh] bg-card rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col"
       >
         <button
           onClick={onClose}
@@ -144,7 +144,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           <X size={18} />
         </button>
 
-        <div className="overflow-y-auto custom-scrollbar">
+        <div className="flex-1 min-h-0 overflow-y-auto custom-scrollbar">
           <div className="w-full aspect-[16/10] md:aspect-[2/1] overflow-hidden flex-shrink-0">
             {teacher.photo ? (
               <img src={teacher.photo} alt={teacher.name} className="w-full h-full object-cover object-center" />
