@@ -186,19 +186,15 @@ const [name, setName] = useState("");
               </div>
               <div>
                 <label className="block font-body text-sm font-semibold text-foreground mb-1.5">
-                  Промокод <span className="font-normal text-muted-foreground">(необязательно)</span>
+                  Ваши пожелания <span className="font-normal text-muted-foreground">(необязательно)</span>
                 </label>
-                <input
-                  type="text"
-                  value={promo}
-                  onChange={(e) => {setPromo(e.target.value);setPromoError("");}}
-                  placeholder="Введите промокод"
-                  maxLength={30}
-                  className={`w-full px-4 py-3 rounded-[16px] border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 ${promoError ? "border-destructive" : "border-border"}`} />
-                
-                {promoError &&
-                <p className="text-destructive text-sm mt-1.5 font-body">{promoError}</p>
-                }
+                <textarea
+                  value={wishes}
+                  onChange={(e) => setWishes(e.target.value)}
+                  placeholder="Например, удобное время, цели занятий..."
+                  maxLength={300}
+                  rows={3}
+                  className="w-full px-4 py-3 rounded-[16px] border border-border bg-background text-foreground font-body focus:outline-none focus:ring-2 focus:ring-primary/50 resize-none" />
               </div>
               <button
                 type="submit"
