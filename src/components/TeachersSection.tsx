@@ -4,7 +4,7 @@ import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
 import annaImg from "@/assets/teachers/anna-zolotareva.webp";
-import borisImg from "@/assets/teachers/boris.webp";
+
 
 
 interface Teacher {
@@ -57,20 +57,6 @@ const teachers: Teacher[] = [
       "Индивидуальный подход, снятие зажима сцены, высокие ноты.",
       "Жанры: поп, рок, джаз, соул.",
       "Пишет песни/аранжировки, позитивная атмосфера.",
-    ],
-  },
-  {
-    name: "Борис Согава",
-    specialty: "Укулеле & Гитара",
-    specialtyEmoji: "🎸",
-    icon: <Guitar size={20} />,
-    photo: borisImg,
-    description: [
-      "Борис — педагог по гитаре.",
-      "Выпускник МОМК им. Прокофьева с отличием, лауреат конкурсов.",
-      "Бас-гитарист Lunar Miura, сольные выступления.",
-      "Учит классику, акустику, электрогитару, бас, укулеле.",
-      "Любой стиль: рок, джаз, классика, регги.",
     ],
   },
   {
