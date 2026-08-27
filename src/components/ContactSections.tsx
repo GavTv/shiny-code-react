@@ -76,23 +76,16 @@ const FeedbackForm = ({ onPrivacyOpen }: {onPrivacyOpen: () => void;}) => {
 const [name, setName] = useState("");
   const [discipline, setDiscipline] = useState("");
   const [phone, setPhone] = useState("");
-  const [promo, setPromo] = useState("");
-  const [promoError, setPromoError] = useState("");
+  const [wishes, setWishes] = useState("");
   const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const trimmedPromo = promo.trim().toLowerCase();
-    if (trimmedPromo && trimmedPromo !== "lovesound") {
-      setPromoError("Такого промокода не существует");
-      return;
-    }
-    setPromoError("");
     setSending(true);
 
     try {
       const response = await supabase.functions.invoke("send-to-telegram", {
-        body: { name: name.trim(), discipline, phone, promo: trimmedPromo }
+        body: { name: name.trim(), discipline, phone, wishes: wishes.trim() }
       });
 
       console.log("Telegram response:", response);
@@ -109,7 +102,7 @@ const [name, setName] = useState("");
       setName("");
       setDiscipline("");
       setPhone("");
-      setPromo("");
+      setWishes("");
     } catch (err) {
       console.error("Form submission error:", err);
       toast.error("Не удалось отправить заявку", {
