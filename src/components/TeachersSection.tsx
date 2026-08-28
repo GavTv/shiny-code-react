@@ -130,7 +130,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 md:p-6 animate-fade-in"
+      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-y-auto p-4 md:p-6 animate-fade-in"
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
@@ -140,7 +140,7 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
         aria-modal="true"
         aria-label={`Информация о преподавателе ${teacher.name}`}
         onClick={(e) => e.stopPropagation()}
-        className="relative my-auto flex w-full max-w-[300px] flex-col overflow-hidden rounded-2xl bg-card shadow-2xl animate-scale-in max-h-[calc(100dvh-2rem)] md:max-h-[calc(100dvh-3rem)] md:max-w-[720px] md:flex-row md:rounded-3xl"
+        className="relative my-auto flex max-h-[76dvh] w-full max-w-[300px] flex-col overflow-hidden rounded-2xl bg-card shadow-2xl animate-scale-in md:max-h-[85dvh] md:max-w-[720px] md:flex-row md:rounded-3xl"
       >
         <button
           onClick={onClose}
