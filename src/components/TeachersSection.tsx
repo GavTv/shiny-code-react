@@ -3,7 +3,8 @@ import { Mic, Guitar, Headphones, User, X } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-import annaImg from "@/assets/teachers/anna-zolotareva.webp";
+import annaZolotarevaImg from "@/assets/teachers/anna-zolotareva.webp";
+import annaZhirovaImg from "@/assets/teachers/anna.webp";
 
 
 
