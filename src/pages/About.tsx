@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
-import FounderHero from "@/components/FounderHero";
 import TeachersSection from "@/components/TeachersSection";
 import PedagogySection from "@/components/PedagogySection";
 import AboutGallery from "@/components/AboutGallery";
@@ -18,7 +17,6 @@ const About = () => {
         path="/about"
       />
       <Navigation />
-      <FounderHero />
       <TeachersSection />
       <PedagogySection />
       <AboutGallery />
