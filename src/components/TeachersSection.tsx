@@ -3,7 +3,8 @@ import { Mic, Guitar, Headphones, User, X } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-import annaImg from "@/assets/teachers/anna-zolotareva.webp";
+import annaZolotarevaImg from "@/assets/teachers/anna-zolotareva.webp";
+import annaZhirovaImg from "@/assets/teachers/anna.webp";
 
 
 
@@ -17,6 +18,20 @@ interface Teacher {
 }
 
 const teachers: Teacher[] = [
+  {
+    name: "Анна Жирова",
+    specialty: "Вокал",
+    specialtyEmoji: "🎤",
+    icon: <Mic size={20} />,
+    photo: annaZhirovaImg,
+    description: [
+      "Анна Жирова — основатель школы «Звук Вокруг» и преподаватель вокала.",
+      "Веду индивидуальные занятия по вокалу для взрослых и детей. Помогаю раскрыть голос, петь свободнее и увереннее, освоить современную технику и подготовиться к выступлению, записи или важному музыкальному событию.",
+      "На занятиях мы работаем с дыханием, опорой, интонацией, диапазоном, дикцией, ритмом, эмоциональной подачей и репертуаром. Программа всегда строится под вашу задачу и текущий уровень — можно прийти с нуля, продолжить развитие или подготовиться к сцене.",
+      "Мой путь в музыке — более 19 лет. Я окончила колледж при Российской академии музыки имени Гнесиных и Московский педагогический государственный университет, проходила повышение квалификации в Berklee College of Music.",
+      "Как основатель школы, я отвечаю за качество обучения и собрала команду преподавателей, которым доверяю. При этом продолжаю лично вести учеников — для тех, кому важны индивидуальный подход, сильная база и поддержка на пути к своему звучанию.",
+    ],
+  },
   {
     name: "Александр Палашев",
     specialty: "Гитара",
@@ -64,7 +79,7 @@ const teachers: Teacher[] = [
     specialty: "Вокал, фортепиано",
     specialtyEmoji: "🎤🎹",
     icon: <Mic size={20} />,
-    photo: annaImg,
+    photo: annaZolotarevaImg,
     description: [
       "Анна — автор и исполнитель собственной музыки, педагог по вокалу и фортепиано, активная концертирующая артистка.",
       "Обучает свободному и выразительному звучанию в стилях поп, рок, джаз, фанк, соул, блюз и романсы.",
