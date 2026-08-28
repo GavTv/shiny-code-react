@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Mic, Guitar, Headphones, User, X } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
@@ -127,16 +128,19 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
     };
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center p-3 md:p-4 animate-fade-in"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto p-4 md:p-6 animate-fade-in"
       onClick={onClose}
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
 
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={`Информация о преподавателе ${teacher.name}`}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-[320px] md:max-w-[720px] max-h-[78vh] md:max-h-[85vh] bg-card rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden animate-scale-in flex flex-col md:flex-row"
+        className="relative my-auto flex w-full max-w-[300px] flex-col overflow-hidden rounded-2xl bg-card shadow-2xl animate-scale-in max-h-[calc(100dvh-2rem)] md:max-h-[calc(100dvh-3rem)] md:max-w-[720px] md:flex-row md:rounded-3xl"
       >
         <button
           onClick={onClose}
@@ -180,7 +184,8 @@ const TeacherModal = ({ teacher, onClose }: { teacher: Teacher; onClose: () => v
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 
