@@ -245,10 +245,10 @@ const LocationsSection = () =>
           </div>
           <div className="space-y-2 mb-6">
             <p className="font-body font-semibold text-foreground">Поварская улица, 23с1</p>
-            <p className="font-body text-muted-foreground text-sm">Москва, 123308</p>
+            <p className="font-body text-muted-foreground text-sm">Москва, 121069</p>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="text-sm">🚇</span>
-              <span className="font-body text-sm">7 мин от метро Арбатская</span>
+              <span className="font-body text-sm">5 мин от метро Арбатская</span>
             </div>
           </div>
           <a
