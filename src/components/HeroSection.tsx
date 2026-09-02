@@ -56,11 +56,11 @@ const HeroSection = () => {
         <div className="flex items-center gap-2 text-background/80 mt-2">
           <MapPin size={20} className="text-accent flex-shrink-0" />
           <span className="font-body text-sm md:text-base">
-            Москва, ул. Мнёвники, 7к1 — 7 мин от метро Народного Ополчения
+            Москва, ул. Поварская, 23с1 — 5 мин от метро Арбатская
           </span>
         </div>
         <a
-          href="https://yandex.ru/maps/?whatshere[point]=37.472983,55.779459&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%BD%D1%91%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8%2C%207%D0%BA1"
+          href="https://yandex.ru/maps/?whatshere[point]=37.5905206,55.7556060&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9F%D0%BE%D0%B2%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2023%D1%811"
           target="_blank"
           rel="noreferrer noopener"
           className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-background text-foreground font-heading font-semibold text-sm hover:bg-background/90 transition-all duration-300"

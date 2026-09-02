@@ -10,14 +10,15 @@ const localBusinessSchema = {
   email: "soundaround.club@yandex.ru",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "улица Мнёвники, дом 7, корпус 1",
+    streetAddress: "Поварская улица, 23с1",
     addressLocality: "Москва",
+    postalCode: "121069",
     addressCountry: "RU",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 55.7728,
-    longitude: 37.4569,
+    latitude: 55.7556060,
+    longitude: 37.5905206,
   },
   description:
     "Музыкальная студия «Звук Вокруг» в Москве — уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых.",

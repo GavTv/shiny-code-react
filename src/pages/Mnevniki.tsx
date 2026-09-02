@@ -26,7 +26,7 @@ const advantages = [
   "Своя студия звукозаписи",
   "Концерты для учеников каждый сезон",
   "Гибкое расписание 10:00–22:00",
-  "5 минут от метро Народного Ополчения",
+  "5 минут от метро Арбатская",
 ];
 
 const breadcrumbSchema = {
@@ -34,7 +34,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Главная", item: "https://zvschool.ru/" },
-    { "@type": "ListItem", position: 2, name: "Звук Вокруг Мнёвники", item: "https://zvschool.ru/mnevniki" },
+    { "@type": "ListItem", position: 2, name: "Звук Вокруг Поварская", item: "https://zvschool.ru/mnevniki" },
   ],
 };
 
@@ -44,8 +44,8 @@ const Mnevniki = () => {
   return (
     <div className="w-full min-h-screen">
       <SEO
-        title="Звук Вокруг Мнёвники | Школа вокала и гитары — пробник 1200 руб"
-        description="Уроки вокала, гитары, пианино в Звук Вокруг Мнёвники (ул. Мнёвники 7к1). Пробник 45 мин — 1200 руб. 5 опытных преподавателей."
+        title="Звук Вокруг Поварская | Школа вокала и гитары — пробник 1200 руб"
+        description="Уроки вокала, гитары, пианино в Звук Вокруг Поварская (ул. Поварская, 23с1). Пробник 45 мин — 1200 руб. 5 опытных преподавателей."
         path="/mnevniki"
       />
       <Helmet>
@@ -60,15 +60,15 @@ const Mnevniki = () => {
           <nav className="flex justify-center gap-2 text-sm font-body text-muted-foreground mb-6">
             <Link to="/" className="hover:text-primary transition-colors">Главная</Link>
             <span>/</span>
-            <span className="text-foreground font-semibold">Звук Вокруг Мнёвники</span>
+            <span className="text-foreground font-semibold">Звук Вокруг Поварская</span>
           </nav>
 
           <h1 className="font-heading text-3xl md:text-5xl font-bold text-foreground leading-tight mb-5">
-            Звук Вокруг Мнёвники — музыкальная школа рядом с&nbsp;метро Народного Ополчения
+            Звук Вокруг Поварская — музыкальная школа рядом с&nbsp;метро Арбатская
           </h1>
 
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Мнёвники,&nbsp;7к1. Пробный урок 45&nbsp;минут — <strong className="text-accent">1200&nbsp;₽</strong>.
+            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Поварская,&nbsp;23с1. Пробный урок 45&nbsp;минут — <strong className="text-accent">1200&nbsp;₽</strong>.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">
@@ -107,7 +107,7 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-background">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Чему учим в студии на Мнёвниках
+            Чему учим в студии на Поварской
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {disciplines.map((d) => {
@@ -132,7 +132,7 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-muted/40">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Почему выбирают Звук Вокруг на Мнёвниках
+            Почему выбирают Звук Вокруг на Поварской
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {advantages.map((a) => (
@@ -149,14 +149,14 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-background">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Наша студия на ул. Мнёвники, 7к1
+            Наша студия на ул. Поварская, 23с1
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[studioImg1, studioImg2, studioImg3].map((src, i) => (
               <img
                 key={i}
                 src={src}
-                alt={`Студия Звук Вокруг Мнёвники — фото ${i + 1}`}
+                alt={`Студия Звук Вокруг Поварская — фото ${i + 1}`}
                 className="w-full h-56 md:h-64 object-cover rounded-2xl shadow"
                 loading="lazy"
               />
@@ -173,7 +173,7 @@ const Mnevniki = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-6">
             <MapPin size={18} className="text-primary" />
-            <span>ул. Мнёвники, 7к1 — 5 мин от м. Народного Ополчения</span>
+            <span>ул. Поварская, 23с1 — 5 мин от м. Арбатская</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-8">
             <Clock size={18} className="text-primary" />
@@ -181,8 +181,8 @@ const Mnevniki = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c0bf7d4a0e5e2e7e2c0b0c0d0e0f0a0&amp;source=constructor"
-              title="Звук Вокруг на карте — Мнёвники 7к1"
+              src="https://yandex.ru/map-widget/v1/?ll=37.5905206%2C55.7556060&z=17&mode=whatshere&whatshere%5Bpoint%5D=37.5905206%2C55.7556060"
+              title="Звук Вокруг на карте — Поварская 23с1"
               width="100%"
               height="350"
               className="w-full"
@@ -200,7 +200,7 @@ const Mnevniki = () => {
             Запишитесь на пробный урок — 1200 ₽
           </h2>
           <p className="font-body text-primary-foreground/90 mb-7">
-            45 минут знакомства с преподавателем и студией на Мнёвниках
+            45 минут знакомства с преподавателем и студией на Поварской
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
