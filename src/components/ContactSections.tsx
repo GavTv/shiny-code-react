@@ -244,7 +244,7 @@ const LocationsSection = () =>
             <h3 className="font-heading text-xl font-bold text-foreground">Наш адрес</h3>
           </div>
           <div className="space-y-2 mb-6">
-            <p className="font-body font-semibold text-foreground">улица Поварская, 7к1</p>
+            <p className="font-body font-semibold text-foreground">Поварская улица, 23с1</p>
             <p className="font-body text-muted-foreground text-sm">Москва, 123308</p>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="text-sm">🚇</span>

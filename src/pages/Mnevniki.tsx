@@ -45,7 +45,7 @@ const Mnevniki = () => {
     <div className="w-full min-h-screen">
       <SEO
         title="Звук Вокруг Поварская | Школа вокала и гитары — пробник 1200 руб"
-        description="Уроки вокала, гитары, пианино в Звук Вокруг Поварская (ул. Поварская 7к1). Пробник 45 мин — 1200 руб. 5 опытных преподавателей."
+        description="Уроки вокала, гитары, пианино в Звук Вокруг Поварская (ул. Поварская, 23с1). Пробник 45 мин — 1200 руб. 5 опытных преподавателей."
         path="/mnevniki"
       />
       <Helmet>
@@ -68,7 +68,7 @@ const Mnevniki = () => {
           </h1>
 
           <p className="font-body text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Поварская,&nbsp;7к1. Пробный урок 45&nbsp;минут — <strong className="text-accent">1200&nbsp;₽</strong>.
+            Уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых на ул.&nbsp;Поварская,&nbsp;23с1. Пробный урок 45&nbsp;минут — <strong className="text-accent">1200&nbsp;₽</strong>.
           </p>
 
           <div className="flex flex-wrap gap-3 justify-center">
@@ -149,7 +149,7 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-background">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Наша студия на ул. Поварская, 7к1
+            Наша студия на ул. Поварская, 23с1
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {[studioImg1, studioImg2, studioImg3].map((src, i) => (
@@ -173,7 +173,7 @@ const Mnevniki = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-6">
             <MapPin size={18} className="text-primary" />
-            <span>ул. Поварская, 7к1 — 5 мин от м. Арбатская</span>
+            <span>ул. Поварская, 23с1 — 5 мин от м. Арбатская</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-8">
             <Clock size={18} className="text-primary" />
@@ -182,7 +182,7 @@ const Mnevniki = () => {
           <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
             <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c0bf7d4a0e5e2e7e2c0b0c0d0e0f0a0&amp;source=constructor"
-              title="Звук Вокруг на карте — Поварская 7к1"
+              title="Звук Вокруг на карте — Поварская 23с1"
               width="100%"
               height="350"
               className="w-full"

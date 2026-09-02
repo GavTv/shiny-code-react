@@ -16,8 +16,8 @@ const localBusinessSchema = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 55.7728,
-    longitude: 37.4569,
+    latitude: 55.7556060,
+    longitude: 37.5905206,
   },
   description:
     "Музыкальная студия «Звук Вокруг» в Москве — уроки вокала, гитары, фортепиано, укулеле, ансамбля и сонграйтинга для детей и взрослых.",

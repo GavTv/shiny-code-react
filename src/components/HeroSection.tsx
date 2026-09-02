@@ -56,7 +56,7 @@ const HeroSection = () => {
         <div className="flex items-center gap-2 text-background/80 mt-2">
           <MapPin size={20} className="text-accent flex-shrink-0" />
           <span className="font-body text-sm md:text-base">
-            Москва, ул. Поварская, 7к1 — 7 мин от метро Арбатская
+            Москва, ул. Поварская, 23с1 — 7 мин от метро Арбатская
           </span>
         </div>
         <a
