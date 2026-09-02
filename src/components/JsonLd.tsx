@@ -10,8 +10,9 @@ const localBusinessSchema = {
   email: "soundaround.club@yandex.ru",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "улица Поварская, дом 7, корпус 1",
+    streetAddress: "Поварская улица, 23с1",
     addressLocality: "Москва",
+    postalCode: "121069",
     addressCountry: "RU",
   },
   geo: {
