@@ -10,7 +10,7 @@ const localBusinessSchema = {
   email: "soundaround.club@yandex.ru",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "улица Мнёвники, дом 7, корпус 1",
+    streetAddress: "улица Поварская, дом 7, корпус 1",
     addressLocality: "Москва",
     addressCountry: "RU",
   },

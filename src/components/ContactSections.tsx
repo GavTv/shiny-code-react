@@ -244,15 +244,15 @@ const LocationsSection = () =>
             <h3 className="font-heading text-xl font-bold text-foreground">Наш адрес</h3>
           </div>
           <div className="space-y-2 mb-6">
-            <p className="font-body font-semibold text-foreground">улица Мнёвники, 7к1</p>
+            <p className="font-body font-semibold text-foreground">улица Поварская, 7к1</p>
             <p className="font-body text-muted-foreground text-sm">Москва, 123308</p>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="text-sm">🚇</span>
-              <span className="font-body text-sm">7 мин от метро Народного Ополчения</span>
+              <span className="font-body text-sm">7 мин от метро Арбатская</span>
             </div>
           </div>
           <a
-          href="https://yandex.ru/maps/?whatshere[point]=37.472983,55.779459&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%9C%D0%BD%D1%91%D0%B2%D0%BD%D0%B8%D0%BA%D0%B8%2C%207%D0%BA1"
+          href="https://yandex.ru/maps/?whatshere[point]=37.5905206,55.7556060&whatshere[zoom]=17&text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D0%9F%D0%BE%D0%B2%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C%2023%D1%811"
           target="_blank"
           rel="noreferrer noopener"
           className="inline-flex items-center gap-2 px-6 py-3 rounded-[16px] bg-primary text-primary-foreground font-heading font-bold hover:bg-primary/90 transition-all duration-300">

@@ -70,7 +70,7 @@ const Footer = ({ onPrivacyOpen }: FooterProps) => {
                   <MapPin size={20} />
                 </div>
                 <span className="text-foreground text-sm md:text-base font-body">
-                  улица Мнёвники дом 7 корпус 1
+                  Поварская улица 23 строение 1
                 </span>
               </div>
             </div>
