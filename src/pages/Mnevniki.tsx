@@ -107,7 +107,7 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-background">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Чему учим в студии на Мнёвниках
+            Чему учим в студии на Поварской
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {disciplines.map((d) => {
@@ -132,7 +132,7 @@ const Mnevniki = () => {
       <section className="w-full py-14 md:py-20 px-4 bg-muted/40">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground text-center mb-10">
-            Почему выбирают Звук Вокруг на Мнёвниках
+            Почему выбирают Звук Вокруг на Поварской
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {advantages.map((a) => (
@@ -181,7 +181,7 @@ const Mnevniki = () => {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg border border-border">
             <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c0bf7d4a0e5e2e7e2c0b0c0d0e0f0a0&amp;source=constructor"
+              src="https://yandex.ru/map-widget/v1/?ll=37.5905206%2C55.7556060&z=17&mode=whatshere&whatshere%5Bpoint%5D=37.5905206%2C55.7556060"
               title="Звук Вокруг на карте — Поварская 23с1"
               width="100%"
               height="350"
@@ -200,7 +200,7 @@ const Mnevniki = () => {
             Запишитесь на пробный урок — 1200 ₽
           </h2>
           <p className="font-body text-primary-foreground/90 mb-7">
-            45 минут знакомства с преподавателем и студией на Мнёвниках
+            45 минут знакомства с преподавателем и студией на Поварской
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <a
