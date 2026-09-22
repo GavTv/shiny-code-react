@@ -4,7 +4,6 @@ import { Mic, Guitar, Headphones, User, X } from "lucide-react";
 import aleksandrImg from "@/assets/teachers/aleksandr.webp";
 import nastyaImg from "@/assets/teachers/nastya.webp";
 import aleksandraImg from "@/assets/teachers/aleksandra.webp";
-import annaZolotarevaImg from "@/assets/teachers/anna-zolotareva.webp";
 import annaZhirovaImg from "@/assets/teachers/anna.webp";
 
 
@@ -73,18 +72,6 @@ const teachers: Teacher[] = [
       "Индивидуальный подход, снятие зажима сцены, высокие ноты.",
       "Жанры: поп, рок, джаз, соул.",
       "Пишет песни/аранжировки, позитивная атмосфера.",
-    ],
-  },
-  {
-    name: "Анна Золотарёва",
-    specialty: "Вокал, фортепиано",
-    specialtyEmoji: "🎤🎹",
-    icon: <Mic size={20} />,
-    photo: annaZolotarevaImg,
-    description: [
-      "Анна — автор и исполнитель собственной музыки, педагог по вокалу и фортепиано, активная концертирующая артистка.",
-      "Обучает свободному и выразительному звучанию в стилях поп, рок, джаз, фанк, соул, блюз и романсы.",
-      "Помогает написать собственные песни и научиться аккомпанировать себе за фортепиано.",
     ],
   },
 ];
