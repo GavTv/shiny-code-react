@@ -18,10 +18,24 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
+const MAXIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+    <defs>
+      <linearGradient id="maxGradNav" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stopColor="#4E5DF7" />
+        <stop offset="100%" stopColor="#9B4DFF" />
+      </linearGradient>
+    </defs>
+    <circle cx="12" cy="12" r="12" fill="url(#maxGradNav)" />
+    <path d="M7 16.2V8.4l5 5.2 5-5.2v7.8" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
+
 const socials = [
   { label: "Telegram", href: "https://t.me/zv_musicstudio?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5,%20%D0%BF%D0%B8%D1%88%D1%83%20%D0%92%D0%B0%D0%BC%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20Zoon", icon: Send },
   { label: "ВКонтакте", href: "https://vk.com/studiozv", icon: () => <span className="text-xs font-heading font-bold">ВК</span> },
   { label: "WhatsApp", href: "https://wa.me/79162353381", icon: WhatsAppIcon },
+  { label: "MAX", href: "https://max.ru", icon: MAXIcon },
 ];
 
 const Navigation = () => {
