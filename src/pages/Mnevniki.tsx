@@ -26,7 +26,7 @@ const advantages = [
   "Своя студия звукозаписи",
   "Концерты для учеников каждый сезон",
   "Гибкое расписание 10:00–22:00",
-  "5 минут от метро Арбатская",
+  "10 минут от метро Арбатская",
 ];
 
 const breadcrumbSchema = {
@@ -173,7 +173,7 @@ const Mnevniki = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-6">
             <MapPin size={18} className="text-primary" />
-            <span>ул. Поварская, 23с1 — 5 мин от м. Арбатская</span>
+            <span>ул. Поварская, 23с1 — 10 мин от м. Арбатская</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-muted-foreground font-body mb-8">
             <Clock size={18} className="text-primary" />
